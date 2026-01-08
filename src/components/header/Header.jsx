@@ -79,7 +79,7 @@ export default function Header() {
               Agendar
             </Link>
             <Link
-              to="/cadastrar"
+              to="/auth/cadastrar"
               className="inline-flex items-center justify-center gap-2 px-5 py-2 rounded-lg
                          bg-teal-800 text-white font-semibold
                          hover:bg-teal-700 transition w-full md:w-auto"
