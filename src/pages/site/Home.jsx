@@ -19,7 +19,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="relative z-10 text-center px-6 max-w-3xl">
           <h1 className="text-4xl md:text-6xl font-bold text-teal-200 mb-6">
-            Conectando pacientes, médicos e centros de saúde
+            Conectando pacientes, médicos, farmácias e centros de saúde
           </h1>
           <p className="text-slate-50 text-lg md:text-xl mb-8">
             Acompanhe seu histórico clínico digital, agende consultas e interaja
