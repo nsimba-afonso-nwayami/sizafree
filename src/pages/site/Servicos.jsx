@@ -99,7 +99,7 @@ export default function Servicos() {
                   clínicas parceiras de Angola.
                 </p>
                 <Link
-                  to="/agendamento"
+                  to="/agendar"
                   className="mt-auto inline-flex items-center justify-center gap-2 px-6 py-3 bg-teal-500 text-white font-semibold rounded-lg hover:bg-teal-600 transition cursor-pointer"
                 >
                   <i className="fa-solid fa-arrow-right"></i>
@@ -145,7 +145,7 @@ export default function Servicos() {
                   digital, disponível em qualquer lugar.
                 </p>
                 <Link
-                  to="/historico-clinico"
+                  to="/auth/cadastrar"
                   className="mt-auto inline-flex items-center justify-center gap-2 px-6 py-3 bg-teal-500 text-white font-semibold rounded-lg hover:bg-teal-600 transition cursor-pointer"
                 >
                   <i className="fa-solid fa-arrow-right"></i>
