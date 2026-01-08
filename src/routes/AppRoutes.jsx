@@ -1,11 +1,16 @@
 import { Routes, Route } from "react-router-dom";
+
+/*Rotas do site */
 import Home from "../pages/site/Home";
 import Servicos from "../pages/site/Servicos";
 import Sobre from "../pages/site/Sobre";
 import Especialistas from "../pages/site/Especialistas";
 import Agendar from "../pages/site/Agendar";
 import Telemedicina from "../pages/site/Telemedicina";
+import Contato from "../pages/site/Contato";
 import NotFound from "../pages/site/NotFound";
+
+/*Rotas de auth */
 
 export default function AppRoutes () {
     return (
@@ -17,6 +22,7 @@ export default function AppRoutes () {
             <Route path="/especialistas" element={<Especialistas />} />
             <Route path="/agendar" element={<Agendar />} />
             <Route path="/telemedicina" element={<Telemedicina />} />
+            <Route path="/contato" element={<Contato />} />
             <Route path="*" element={<NotFound />} />
         </Routes>
     )
