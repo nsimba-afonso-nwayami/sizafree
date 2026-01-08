@@ -66,6 +66,12 @@ export default function Header() {
           >
             Unidades de Saúde
           </Link>
+          <Link
+            to="/farmacias"
+            className="text-slate-800 font-medium hover:text-teal-500 transition w-full md:w-auto text-center md:text-left"
+          >
+            Farmácias
+          </Link>
 
           {/* Botões CTA */}
           <div className="flex flex-col md:flex-row gap-3 mt-2 md:mt-0 w-full md:w-auto">
