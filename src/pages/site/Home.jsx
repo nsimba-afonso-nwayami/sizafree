@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Header from "../../components/header/Header";
 import Footer from "../../components/footer/Footer";
 import HeroImg from "../../assets/img/home.jpg";
@@ -26,24 +27,24 @@ export default function Home() {
           </p>
 
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <a
-              href="/agendar"
+            <Link
+              to="/agendar"
               className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg
                          bg-teal-500 text-white font-semibold
                          hover:bg-teal-600 transition w-full sm:w-auto"
             >
               <i className="fa-solid fa-calendar-check"></i>
               Agendar
-            </a>
-            <a
-              href="/cadastrar"
+            </Link>
+            <Link
+              to="/auth/cadastrar"
               className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg
                          bg-teal-800 text-white font-semibold
                          hover:bg-teal-700 transition w-full sm:w-auto"
             >
               <i className="fa-solid fa-user-plus"></i>
               Cadastrar
-            </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -404,13 +405,13 @@ export default function Home() {
             </div>
 
             {/* CTA */}
-            <a
-              href="/sobre"
+            <Link
+              to="/sobre"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-teal-500 text-white font-semibold hover:bg-teal-600 transition cursor-pointer"
             >
               <i className="fa-solid fa-arrow-right"></i>
               Saiba Mais
-            </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -507,12 +508,12 @@ export default function Home() {
 
           {/* Botão Saber Mais */}
           <div className="text-center mt-12">
-            <a
-              href="/servicos"
+            <Link
+              to="/servicos"
               className="inline-block px-8 py-4 rounded-lg bg-teal-500 text-white font-semibold hover:bg-teal-600 transition cursor-pointer"
             >
               Saber Mais
-            </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -574,13 +575,13 @@ export default function Home() {
             </div>
 
             {/* Botão CTA */}
-            <a
-              href="/telemedicina"
+            <Link
+              to="/telemedicina"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-teal-500 text-white font-semibold hover:bg-teal-600 transition cursor-pointer"
             >
               <i className="fa-solid fa-arrow-right"></i>
               Saiba Mais
-            </a>
+            </Link>
           </div>
 
           {/* Vídeo à direita */}
@@ -609,18 +610,18 @@ export default function Home() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mt-4">
-            <a
-              href="/cadastro"
+            <Link
+              to="/auth/cadastrar"
               className="px-8 py-3 rounded-lg bg-white text-teal-500 font-semibold hover:bg-teal-100 transition cursor-pointer"
             >
               Cadastrar
-            </a>
-            <a
-              href="/agendar"
+            </Link>
+            <Link
+              to="/agendar"
               className="px-8 py-3 rounded-lg bg-white text-teal-500 font-semibold hover:bg-teal-100 transition cursor-pointer"
             >
               Agendar Consulta
-            </a>
+            </Link>
           </div>
         </div>
       </section>
