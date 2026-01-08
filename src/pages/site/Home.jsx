@@ -244,7 +244,7 @@ export default function Home() {
               </h3>
               <p className="text-slate-800">
                 Agendamento digital simples e autónomo através da plataforma
-                Baika + Saúde.
+                Siza Free.
               </p>
             </div>
 
@@ -289,8 +289,7 @@ export default function Home() {
                 Ligação Direta
               </h3>
               <p className="text-slate-800">
-                Ligação direta com os serviços disponíveis no sistema Baika +
-                Saúde.
+                Ligação direta com os serviços disponíveis no sistema Siza Free.
               </p>
             </div>
 
@@ -351,7 +350,7 @@ export default function Home() {
               Fazendo por Angola
             </h2>
             <p className="text-slate-800 mb-4">
-              O sistema Baika + Saúde é desenvolvido em Angola, com foco em
+              O sistema Siza Free é desenvolvido em Angola, com foco em
               soluções que fortalecem o acesso à saúde da população. Conectamos
               pacientes, médicos, farmácias e centros médicos de forma eficiente
               e digital.
