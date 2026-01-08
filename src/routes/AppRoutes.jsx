@@ -10,7 +10,9 @@ import Telemedicina from "../pages/site/Telemedicina";
 import Contato from "../pages/site/Contato";
 import NotFound from "../pages/site/NotFound";
 
-/*Rotas de auth */
+/*Rotas de autenticação */
+import Login from "../pages/auth/Login";
+import Cadastrar from "../pages/auth/Cadastrar";
 
 export default function AppRoutes () {
     return (
@@ -24,6 +26,10 @@ export default function AppRoutes () {
             <Route path="/telemedicina" element={<Telemedicina />} />
             <Route path="/contato" element={<Contato />} />
             <Route path="*" element={<NotFound />} />
+
+            {/*Rotas de autenticação */}
+            <Route path="/auth/login" element={<Login />} />
+            <Route path="/auth/cadastrar" element={<Cadastrar />} />
         </Routes>
     )
 }
