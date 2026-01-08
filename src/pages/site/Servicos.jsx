@@ -10,6 +10,41 @@ export default function Servicos() {
       {/* Header */}
       <Header />
 
+      {/* Introdução */}
+      <section className="py-20 px-6 bg-white">
+        <div className="max-w-4xl mx-auto text-center">
+          <span className="inline-block mb-4 px-4 py-1 text-sm font-semibold rounded-full bg-teal-200 text-teal-700">
+            O que oferecemos
+          </span>
+
+          <h1 className="text-4xl md:text-5xl font-bold text-teal-800 mb-6">
+            Serviços Digitais para Cuidar da Sua Saúde
+          </h1>
+
+          <p className="text-lg text-slate-600 mb-8">
+            O Siza Free oferece um ecossistema completo de serviços de saúde
+            digital, conectando pacientes, médicos, farmácias e unidades de
+            saúde em um só lugar, com praticidade, segurança e inovação.
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/agendar"
+              className="px-8 py-4 bg-teal-500 text-white font-semibold rounded-lg shadow hover:bg-teal-600 transition"
+            >
+              Agendar Consulta
+            </Link>
+
+            <Link
+              to="/sobre"
+              className="px-8 py-4 border border-teal-500 text-teal-600 font-semibold rounded-lg hover:bg-teal-50 transition"
+            >
+              Saiba Mais Sobre Nós
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Seção de Serviços */}
       <section className="bg-slate-50 py-24 px-6">
         <div className="max-w-7xl mx-auto">
