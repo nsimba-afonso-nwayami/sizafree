@@ -5,6 +5,8 @@ import Home from "../pages/site/Home";
 import Servicos from "../pages/site/Servicos";
 import Sobre from "../pages/site/Sobre";
 import Especialistas from "../pages/site/Especialistas";
+import Unidades from "../pages/site/Unidades";
+import Farmacias from "../pages/site/Farmacias";
 import Agendar from "../pages/site/Agendar";
 import Telemedicina from "../pages/site/Telemedicina";
 import Contato from "../pages/site/Contato";
@@ -26,6 +28,8 @@ export default function AppRoutes () {
             <Route path="/servicos" element={<Servicos />} />
             <Route path="/sobre" element={<Sobre />} />
             <Route path="/especialistas" element={<Especialistas />} />
+            <Route path="/unidades" element={<Unidades />} />
+            <Route path="/farmacias" element={<Farmacias />} />
             <Route path="/agendar" element={<Agendar />} />
             <Route path="/telemedicina" element={<Telemedicina />} />
             <Route path="/contato" element={<Contato />} />
