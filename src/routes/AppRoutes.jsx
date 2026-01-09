@@ -20,6 +20,10 @@ import CadastrarFarmacia from "../pages/auth/CadastrarFarmacia";
 import CadastrarHospital from "../pages/auth/CadastrarHospital";
 import EsqueceuSenha from "../pages/auth/EsqueceuSenha";
 
+//Rotas do paciente
+import DashboardPaciente from "../pages/paciente/DashboardPaciente";
+import NotFoundPaciente from "../pages/paciente/NotFoundPaciente";
+
 export default function AppRoutes () {
     return (
         <Routes>
@@ -42,6 +46,12 @@ export default function AppRoutes () {
             <Route path="/auth/cadastrar/farmacia" element={<CadastrarFarmacia />} />
             <Route path="/auth/cadastrar/hospital" element={<CadastrarHospital />} />
             <Route path="/auth/esqueceu-senha" element={<EsqueceuSenha />} />
+
+            {/*Rotas do paciente */}
+            <Route path="/dashboard/paciente/">
+                <Route path="" element={<DashboardPaciente />} />
+                <Route path="*" element={<NotFoundPaciente />} />
+            </Route>
         </Routes>
     )
 }
