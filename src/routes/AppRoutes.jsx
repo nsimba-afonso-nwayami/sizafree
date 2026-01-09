@@ -22,6 +22,8 @@ import EsqueceuSenha from "../pages/auth/EsqueceuSenha";
 
 //Rotas do paciente
 import DashboardPaciente from "../pages/paciente/DashboardPaciente";
+import PerfilPaciente from "../pages/paciente/PerfilPaciente";
+import ConsultasPaciente from "../pages/paciente/ConsultasPaciente";
 import NotFoundPaciente from "../pages/paciente/NotFoundPaciente";
 
 export default function AppRoutes () {
@@ -50,6 +52,8 @@ export default function AppRoutes () {
             {/*Rotas do paciente */}
             <Route path="/dashboard/paciente/">
                 <Route path="" element={<DashboardPaciente />} />
+                <Route path="perfil" element={<PerfilPaciente />} />
+                <Route path="consultas" element={<ConsultasPaciente />} />
                 <Route path="*" element={<NotFoundPaciente />} />
             </Route>
         </Routes>
