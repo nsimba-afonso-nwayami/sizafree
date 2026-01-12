@@ -15,7 +15,7 @@ import NotFound from "../pages/site/NotFound";
 /*Rotas de autenticação */
 import Login from "../pages/auth/Login";
 import Cadastrar from "../pages/auth/Cadastrar";
-import CadastrarMedico from "../pages/auth/CadastrarMedico";
+import CadastrarEspecialista from "../pages/auth/CadastrarEspecialista";
 import CadastrarFarmacia from "../pages/auth/CadastrarFarmacia";
 import CadastrarHospital from "../pages/auth/CadastrarHospital";
 import EsqueceuSenha from "../pages/auth/EsqueceuSenha";
@@ -44,7 +44,7 @@ export default function AppRoutes () {
             {/*Rotas de autenticação */}
             <Route path="/auth/login" element={<Login />} />
             <Route path="/auth/cadastrar" element={<Cadastrar />} />
-            <Route path="/auth/cadastrar/medico" element={<CadastrarMedico />} />
+            <Route path="/auth/cadastrar/especialista" element={<CadastrarEspecialista />} />
             <Route path="/auth/cadastrar/farmacia" element={<CadastrarFarmacia />} />
             <Route path="/auth/cadastrar/hospital" element={<CadastrarHospital />} />
             <Route path="/auth/esqueceu-senha" element={<EsqueceuSenha />} />
