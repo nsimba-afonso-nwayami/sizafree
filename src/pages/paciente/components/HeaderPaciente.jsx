@@ -1,3 +1,5 @@
+import { Link, useNavigate } from "react-router-dom";
+
 export default function HeaderPaciente({ sidebarOpen, setSidebarOpen, title }) {
   return (
     <header
@@ -19,20 +21,20 @@ export default function HeaderPaciente({ sidebarOpen, setSidebarOpen, title }) {
       <h2 className="text-lg sm:text-xl font-bold text-white">{title}</h2>
 
       <div className="flex items-center gap-4">
-        <button className="relative text-xl text-white hover:text-teal-200 transition">
+        <Link to="/dashboard/paciente/notificacoes" className="relative text-xl text-white hover:text-teal-200 transition">
           <i className="fas fa-bell"></i>
           <span className="absolute -top-1 -right-1 bg-teal-500 text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">
             3
           </span>
-        </button>
+        </Link>
 
         <div className="flex items-center gap-3">
           <span className="text-sm text-teal-200 hidden sm:block">
             Paciente
           </span>
-          <div className="w-9 h-9 bg-teal-500 rounded-full flex items-center justify-center">
+          <Link to="/dashboard/paciente/perfil" className="w-9 h-9 bg-teal-500 rounded-full flex items-center justify-center">
             <i className="fas fa-user text-white"></i>
-          </div>
+          </Link>
         </div>
       </div>
     </header>
