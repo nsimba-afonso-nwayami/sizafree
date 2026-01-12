@@ -310,12 +310,12 @@ export default function ConsultasPaciente() {
           Tem certeza que deseja cancelar a sua consulta?
         </p>
         <div className="flex justify-center gap-4">
-          <button className="px-6 py-2 bg-red-500 hover:bg-red-600 text-white font-semibold rounded-lg transition">
+          <button className="px-6 py-2 cursor-pointer bg-red-500 hover:bg-red-600 text-white font-semibold rounded-lg transition">
             Sim
           </button>
           <button
             onClick={() => setOpenConfirm(false)}
-            className="px-6 py-2 bg-slate-200 hover:bg-slate-300 text-slate-800 font-semibold rounded-lg transition"
+            className="px-6 py-2 cursor-pointer bg-slate-200 hover:bg-slate-300 text-slate-800 font-semibold rounded-lg transition"
           >
             Não
           </button>
