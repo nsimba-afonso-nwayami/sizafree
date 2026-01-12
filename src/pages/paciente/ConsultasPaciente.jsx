@@ -2,10 +2,12 @@
 import { Link } from "react-router-dom";
 import PacienteLayout from "./components/PacienteLayout";
 import { useState } from "react";
-import Modal from "./components/Modal"; // Modal reutilizável
+import Modal from "./components/Modal";
+import SmallModal from "./components/SmallModal";
 
 export default function ConsultasPaciente() {
   const [openModal, setOpenModal] = useState(false);
+  const [openConfirm, setOpenConfirm] = useState(false);
 
   const dummyConsultas = [
     {
@@ -147,6 +149,7 @@ export default function ConsultasPaciente() {
                     <i className="fas fa-eye"></i>
                   </Link>
                   <button
+                    onClick={() => setOpenConfirm(true)}
                     className="text-red-400 hover:text-red-500 cursor-pointer"
                     title="Cancelar Consulta"
                   >
@@ -296,6 +299,28 @@ export default function ConsultasPaciente() {
           </form>
         </div>
       </Modal>
+
+      <SmallModal
+        isOpen={openConfirm}
+        onClose={() => setOpenConfirm(false)}
+        title="Cancelar"
+        icon="fas fa-exclamation-triangle"
+      >
+        <p className="mb-6 text-slate-700">
+          Tem certeza que deseja cancelar a sua consulta?
+        </p>
+        <div className="flex justify-center gap-4">
+          <button className="px-6 py-2 bg-red-500 hover:bg-red-600 text-white font-semibold rounded-lg transition">
+            Sim
+          </button>
+          <button
+            onClick={() => setOpenConfirm(false)}
+            className="px-6 py-2 bg-slate-200 hover:bg-slate-300 text-slate-800 font-semibold rounded-lg transition"
+          >
+            Não
+          </button>
+        </div>
+      </SmallModal>
     </PacienteLayout>
   );
 }
