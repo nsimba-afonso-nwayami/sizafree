@@ -134,7 +134,7 @@ export default function DashboardPaciente() {
             </p>
           </div>
 
-          <button className="w-full mt-4 py-2 bg-teal-500 hover:bg-teal-600 text-white rounded-lg font-semibold transition">
+          <button className="w-full mt-4 py-2 cursor-pointer bg-teal-500 hover:bg-teal-600 text-white rounded-lg font-semibold transition">
             Gerir Lembretes
           </button>
         </div>
