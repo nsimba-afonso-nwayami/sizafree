@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import PacienteLayout from "./components/PacienteLayout";
 
 export default function ConsultasPaciente() {
@@ -130,12 +131,13 @@ export default function ConsultasPaciente() {
                   </span>
                 </td>
                 <td className="p-3 text-center flex justify-center gap-3 sm:gap-4 text-base">
-                  <button
+                  <Link
+                    to="/dashboard/paciente/consulta/detalhes"
                     className="text-blue-500 hover:text-blue-600 cursor-pointer"
                     title="Ver Detalhes"
                   >
                     <i className="fas fa-eye"></i>
-                  </button>
+                  </Link>
 
                   <button
                     className="text-red-400 hover:text-red-500 cursor-pointer"
