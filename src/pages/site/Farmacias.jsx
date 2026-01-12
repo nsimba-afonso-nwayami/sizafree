@@ -10,7 +10,7 @@ import FarmaciaImg4 from "../../assets/img/farmacia4.jpg";
 export default function Farmacias() {
   return (
     <>
-      <title>Farmácias | Siza Free</title>
+      <title>Farmácias | Sisa Free</title>
 
       {/* Header */}
       <Header />
@@ -149,7 +149,7 @@ export default function Farmacias() {
               </div>
             </div>
             <div className="p-6 text-center">
-              <h3 className="text-xl font-bold text-teal-800">Drogaria Siza</h3>
+              <h3 className="text-xl font-bold text-teal-800">Drogaria Sisa</h3>
               <p className="text-slate-500 mb-4">Benguela</p>
               <Link
                 to="/farmacia/2"

@@ -5,7 +5,7 @@ import Footer from "../../components/footer/Footer";
 export default function Servicos() {
   return (
     <>
-      <title>Serviços | Siza Free</title>
+      <title>Serviços | Sisa Free</title>
 
       {/* Header */}
       <Header />
@@ -22,14 +22,14 @@ export default function Servicos() {
           </h1>
 
           <p className="text-lg text-slate-600 mb-8">
-            O Siza Free oferece um ecossistema completo de serviços de saúde
+            O Sisa Free oferece um ecossistema completo de serviços de saúde
             digital, conectando pacientes, médicos, farmácias e unidades de
             saúde em um só lugar, com praticidade, segurança e inovação.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              to="/agendar"
+              to="/auth/login"
               className="px-8 py-4 bg-teal-500 text-white font-semibold rounded-lg shadow hover:bg-teal-600 transition"
             >
               Agendar Consulta
@@ -54,7 +54,7 @@ export default function Servicos() {
           </h1>
           {/* Parágrafo explicativo */}
           <p className="text-center text-slate-600 mb-16 max-w-3xl mx-auto">
-            Explore a variedade de serviços oferecidos pelo Siza Free,
+            Explore a variedade de serviços oferecidos pelo Sisa Free,
             conectando pacientes, médicos, farmácias e unidades de saúde em
             Angola de forma digital, prática e segura.
           </p>
@@ -99,7 +99,7 @@ export default function Servicos() {
                   clínicas parceiras de Angola.
                 </p>
                 <Link
-                  to="/agendar"
+                  to="/auth/login"
                   className="mt-auto inline-flex items-center justify-center gap-2 px-6 py-3 bg-teal-500 text-white font-semibold rounded-lg hover:bg-teal-600 transition cursor-pointer"
                 >
                   <i className="fa-solid fa-arrow-right"></i>
@@ -229,7 +229,7 @@ export default function Servicos() {
               </h3>
               <p className="text-slate-600 text-center">
                 Crie sua conta de forma rápida e segura para acessar todos os
-                serviços Siza Free.
+                serviços Sisa Free.
               </p>
             </div>
 
@@ -284,7 +284,7 @@ export default function Servicos() {
             Pronto para cuidar da sua saúde?
           </h2>
           <p className="text-slate-100 mb-8 max-w-2xl mx-auto">
-            Com o Siza Free você conecta-se rapidamente a médicos, farmácias e
+            Com o Sisa Free você conecta-se rapidamente a médicos, farmácias e
             hospitais, garantindo atendimento seguro e digital. Crie sua conta e
             agende sua primeira consulta agora!
           </p>

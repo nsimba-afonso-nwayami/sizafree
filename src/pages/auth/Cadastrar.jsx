@@ -6,7 +6,7 @@ export default function Cadastrar() {
 
   return (
     <>
-      <title>Cadastrar-se | Siza Free</title>
+      <title>Cadastrar-se | Sisa Free</title>
 
       <section className="min-h-screen flex items-center justify-center bg-slate-50 px-6 py-12">
         <div className="w-full max-w-md bg-white rounded-2xl p-8 shadow-lg border border-slate-200">

@@ -10,7 +10,7 @@ export default function Header() {
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2 text-2xl font-bold">
           <i className="fa-solid fa-heart-pulse text-teal-500"></i>
-          <span className="text-teal-800">Siza</span>
+          <span className="text-teal-800">Sisa</span>
           <span className="text-teal-500">Free</span>
         </Link>
 
@@ -76,7 +76,7 @@ export default function Header() {
           {/* Botões CTA */}
           <div className="flex flex-col md:flex-row gap-3 mt-2 md:mt-0 w-full md:w-auto">
             <Link
-              to="/agendar"
+              to="/auth/login"
               className="inline-flex items-center justify-center gap-2 px-5 py-2 rounded-lg
                          bg-teal-500 text-white font-semibold
                          hover:bg-teal-600 transition w-full md:w-auto"

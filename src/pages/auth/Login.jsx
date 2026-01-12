@@ -6,7 +6,7 @@ export default function Login() {
 
   return (
     <>
-      <title>Entrar | Siza Free</title>
+      <title>Entrar | Sisa Free</title>
 
       <section className="min-h-screen flex items-center justify-center bg-slate-50 px-6 py-12">
         <div className="w-full max-w-md bg-white rounded-2xl p-8 shadow-lg border border-slate-200">
@@ -18,7 +18,7 @@ export default function Login() {
           </div>
 
           <h2 className="text-3xl font-bold text-teal-800 text-center mb-6">
-            Siza Free Login
+            Sisa Free Login
           </h2>
 
           <form className="space-y-4">

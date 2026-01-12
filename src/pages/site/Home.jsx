@@ -8,7 +8,7 @@ import TeleMedicinaVideo from "../../assets/video/telemedicina.mp4";
 export default function Home() {
   return (
     <>
-      <title>Siza Free</title>
+      <title>Sisa Free</title>
       {/* Header */}
       <Header />
       {/* Hero Section */}
@@ -28,7 +28,7 @@ export default function Home() {
 
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link
-              to="/agendar"
+              to="/auth/login"
               className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg
                          bg-teal-500 text-white font-semibold
                          hover:bg-teal-600 transition w-full sm:w-auto"
@@ -112,37 +112,6 @@ export default function Home() {
           </p>
 
           <form className="bg-white p-8 rounded-xl shadow-md grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* Nome */}
-            <div className="flex flex-col">
-              <label htmlFor="nome" className="mb-2 font-medium text-slate-800">
-                Nome
-              </label>
-              <input
-                type="text"
-                id="nome"
-                placeholder="Seu nome completo"
-                className="border border-slate-500 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-teal-500"
-                required
-              />
-            </div>
-
-            {/* Email */}
-            <div className="flex flex-col">
-              <label
-                htmlFor="email"
-                className="mb-2 font-medium text-slate-800"
-              >
-                Email
-              </label>
-              <input
-                type="email"
-                id="email"
-                placeholder="seuemail@exemplo.com"
-                className="border border-slate-500 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-teal-500"
-                required
-              />
-            </div>
-
             {/* Data da Consulta */}
             <div className="flex flex-col">
               <label htmlFor="data" className="mb-2 font-medium text-slate-800">
@@ -244,7 +213,7 @@ export default function Home() {
               </h3>
               <p className="text-slate-800">
                 Agendamento digital simples e autónomo através da plataforma
-                Siza Free.
+                Sisa Free.
               </p>
             </div>
 
@@ -289,7 +258,7 @@ export default function Home() {
                 Ligação Direta
               </h3>
               <p className="text-slate-800">
-                Ligação direta com os serviços disponíveis no sistema Siza Free.
+                Ligação direta com os serviços disponíveis no sistema Sisa Free.
               </p>
             </div>
 
@@ -350,7 +319,7 @@ export default function Home() {
               Fazendo por Angola
             </h2>
             <p className="text-slate-800 mb-4">
-              O sistema Siza Free é desenvolvido em Angola, com foco em
+              O sistema Sisa Free é desenvolvido em Angola, com foco em
               soluções que fortalecem o acesso à saúde da população. Conectamos
               pacientes, médicos, farmácias e centros médicos de forma eficiente
               e digital.
@@ -601,7 +570,7 @@ export default function Home() {
       <section className="py-16 bg-linear-to-r from-teal-500 to-teal-800">
         <div className="max-w-4xl mx-auto px-6 text-center flex flex-col items-center gap-4">
           <h2 className="text-4xl md:text-5xl font-bold text-white">
-            Comece sua experiência com o Siza Free
+            Comece sua experiência com o Sisa Free
           </h2>
           <p className="text-teal-100 text-lg md:text-xl">
             Cadastre-se agora e tenha acesso a consultas, telemedicina e todo o
@@ -616,7 +585,7 @@ export default function Home() {
               Cadastrar
             </Link>
             <Link
-              to="/agendar"
+              to="/auth/login"
               className="px-8 py-3 rounded-lg bg-white text-teal-500 font-semibold hover:bg-teal-100 transition cursor-pointer"
             >
               Agendar Consulta

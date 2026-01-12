@@ -5,7 +5,7 @@ import Footer from "../../components/footer/Footer";
 export default function Contato() {
   return (
     <>
-      <title>Contato | Siza Free</title>
+      <title>Contato | Sisa Free</title>
 
       {/* Header */}
       <Header />
@@ -112,7 +112,7 @@ export default function Contato() {
             <div className="flex flex-col items-center md:items-start">
               <i className="fa-solid fa-envelope text-2xl mb-2"></i>
               <h3 className="font-semibold text-lg">E-mail</h3>
-              <p>contato@sizafree.com</p>
+              <p>contato@sisafree.com</p>
             </div>
 
             <div className="flex flex-col items-center md:items-start">
@@ -131,7 +131,7 @@ export default function Contato() {
           {/* Mapa */}
           <div className="mt-12 rounded-xl overflow-hidden shadow-lg">
             <iframe
-              title="Mapa Siza Free"
+              title="Mapa Sisa Free"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.123456789!2d13.2345678!3d-8.834567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a51abcd1234567%3A0xabcdef123456!2sLuanda%2C%20Angola!5e0!3m2!1spt-PT!2sus!4v1234567890"
               width="100%"
               height="400"
@@ -151,7 +151,7 @@ export default function Contato() {
             Pronto para cuidar da sua saúde?
           </h2>
           <p className="text-slate-100 mb-8 max-w-2xl mx-auto">
-            Cadastre-se no Siza Free e conecte-se rapidamente a médicos,
+            Cadastre-se no Sisa Free e conecte-se rapidamente a médicos,
             farmácias e hospitais para atendimento seguro e digital.
           </p>
           <Link

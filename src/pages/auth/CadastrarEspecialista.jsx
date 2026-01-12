@@ -1,32 +1,32 @@
 import { Link } from "react-router-dom";
 
-export default function CadastrarFarmacia() {
+export default function CadastrarEspecialista() {
   return (
     <>
-      <title>Cadastrar Farmácia | Sisa Free</title>
+      <title>Cadastrar Especialista | Sisa Free</title>
 
       <section className="min-h-screen flex items-center justify-center bg-slate-50 px-6 py-12">
         <div className="w-full max-w-3xl bg-white rounded-2xl p-8 shadow-lg border border-slate-200">
           {/* Logo */}
           <div className="flex justify-center mb-6">
             <div className="w-16 h-16 flex items-center justify-center bg-teal-500 text-white rounded-full text-3xl shadow-lg">
-              <i className="fa-solid fa-pills"></i>
+              <i className="fa-solid fa-user-doctor"></i>
             </div>
           </div>
 
           <h2 className="text-3xl font-bold text-teal-800 text-center mb-2">
-            Cadastro da Farmácia
+            Complemento de Cadastro Médico
           </h2>
 
           <p className="text-center text-slate-600 mb-8">
-            Complete as informações para validação da farmácia no Sisa Free.
+            Complete as informações profissionais para validação no Siza Free.
           </p>
 
           <form className="space-y-6">
             {/* Foto de perfil */}
             <div>
               <label className="block mb-2 font-semibold text-slate-700">
-                Logo / Foto da Farmácia
+                Foto de Perfil
               </label>
               <input
                 type="file"
@@ -35,56 +35,100 @@ export default function CadastrarFarmacia() {
               />
             </div>
 
-            {/* Nome e licença */}
-            <div className="grid md:grid-cols-2 gap-4">
-              <div>
-                <label className="block mb-2 font-semibold text-slate-700">
-                  Nome da Farmácia
-                </label>
-                <input
-                  type="text"
-                  placeholder="Ex: Farmácia Central"
-                  className="w-full p-3 rounded-lg bg-slate-100 border border-slate-300 focus:outline-none focus:border-teal-500 transition"
-                />
-              </div>
-
-              <div>
-                <label className="block mb-2 font-semibold text-slate-700">
-                  Nº da Licença / Alvará
-                </label>
-                <input
-                  type="text"
-                  placeholder="Ex: ALV-987654"
-                  className="w-full p-3 rounded-lg bg-slate-100 border border-slate-300 focus:outline-none focus:border-teal-500 transition"
-                />
-              </div>
-            </div>
-
-            {/* Responsável técnico */}
+            {/* Especialidade */}
             <div>
               <label className="block mb-2 font-semibold text-slate-700">
-                Farmacêutico Responsável
+                Especialidade
               </label>
-              <input
-                type="text"
-                placeholder="Nome do farmacêutico responsável"
-                className="w-full p-3 rounded-lg bg-slate-100 border border-slate-300 focus:outline-none focus:border-teal-500 transition"
-              />
+              <select className="w-full p-3 rounded-lg bg-slate-100 border border-slate-300 focus:outline-none focus:border-teal-500 transition">
+                <option value="">Selecione a especialidade</option>
+
+                <optgroup label="Clínicas Gerais">
+                  <option>Clínico Geral</option>
+                  <option>Medicina Interna</option>
+                  <option>Medicina Familiar</option>
+                </optgroup>
+
+                <optgroup label="Especialidades Médicas">
+                  <option>Cardiologia</option>
+                  <option>Dermatologia</option>
+                  <option>Endocrinologia</option>
+                  <option>Gastroenterologia</option>
+                  <option>Geriatria</option>
+                  <option>Hematologia</option>
+                  <option>Infectologia</option>
+                  <option>Nefrologia</option>
+                  <option>Neurologia</option>
+                  <option>Oncologia</option>
+                  <option>Pneumologia</option>
+                  <option>Reumatologia</option>
+                </optgroup>
+
+                <optgroup label="Cirúrgicas">
+                  <option>Cirurgia Geral</option>
+                  <option>Cirurgia Plástica</option>
+                  <option>Cirurgia Cardiovascular</option>
+                  <option>Cirurgia Pediátrica</option>
+                  <option>Neurocirurgia</option>
+                  <option>Ortopedia e Traumatologia</option>
+                  <option>Urologia</option>
+                </optgroup>
+
+                <optgroup label="Mulher e Criança">
+                  <option>Ginecologia</option>
+                  <option>Obstetrícia</option>
+                  <option>Pediatria</option>
+                  <option>Neonatologia</option>
+                </optgroup>
+
+                <optgroup label="Diagnóstico e Apoio">
+                  <option>Anestesiologia</option>
+                  <option>Radiologia</option>
+                  <option>Patologia Clínica</option>
+                </optgroup>
+
+                <optgroup label="Saúde Mental">
+                  <option>Psiquiatria</option>
+                </optgroup>
+
+                <optgroup label="Outras Áreas da Saúde">
+                  <option>Enfermagem</option>
+                  <option>Farmácia</option>
+                  <option>Medicina do Trabalho</option>
+                  <option>Medicina Desportiva</option>
+                  <option>Medicina Legal</option>
+                  <option>Saúde Pública</option>
+                </optgroup>
+              </select>
             </div>
 
-            {/* Horário e atendimento */}
+            {/* Registro profissional */}
             <div className="grid md:grid-cols-2 gap-4">
               <div>
                 <label className="block mb-2 font-semibold text-slate-700">
-                  Horário de Funcionamento
+                  Nº da Ordem / Registro Profissional
                 </label>
                 <input
                   type="text"
-                  placeholder="Ex: 08h - 22h"
+                  placeholder="Ex: CRM-123456"
                   className="w-full p-3 rounded-lg bg-slate-100 border border-slate-300 focus:outline-none focus:border-teal-500 transition"
                 />
               </div>
 
+              <div>
+                <label className="block mb-2 font-semibold text-slate-700">
+                  Anos de Experiência
+                </label>
+                <input
+                  type="number"
+                  placeholder="Ex: 5"
+                  className="w-full p-3 rounded-lg bg-slate-100 border border-slate-300 focus:outline-none focus:border-teal-500 transition"
+                />
+              </div>
+            </div>
+
+            {/* Tipo de atendimento */}
+            <div className="grid md:grid-cols-2 gap-4">
               <div>
                 <label className="block mb-2 font-semibold text-slate-700">
                   Tipo de Atendimento
@@ -92,22 +136,21 @@ export default function CadastrarFarmacia() {
                 <select className="w-full p-3 rounded-lg bg-slate-100 border border-slate-300 focus:outline-none focus:border-teal-500 transition">
                   <option value="">Selecione</option>
                   <option>Presencial</option>
-                  <option>Delivery</option>
-                  <option>Presencial e Delivery</option>
+                  <option>Online</option>
+                  <option>Presencial e Online</option>
                 </select>
               </div>
-            </div>
 
-            {/* Endereço */}
-            <div>
-              <label className="block mb-2 font-semibold text-slate-700">
-                Endereço
-              </label>
-              <input
-                type="text"
-                placeholder="Rua, bairro, referência"
-                className="w-full p-3 rounded-lg bg-slate-100 border border-slate-300 focus:outline-none focus:border-teal-500 transition"
-              />
+              <div>
+                <label className="block mb-2 font-semibold text-slate-700">
+                  Hospital / Clínica
+                </label>
+                <input
+                  type="text"
+                  placeholder="Nome da instituição"
+                  className="w-full p-3 rounded-lg bg-slate-100 border border-slate-300 focus:outline-none focus:border-teal-500 transition"
+                />
+              </div>
             </div>
 
             {/* Província */}
@@ -145,7 +188,7 @@ export default function CadastrarFarmacia() {
             <div className="grid md:grid-cols-2 gap-4">
               <div>
                 <label className="block mb-2 font-semibold text-slate-700">
-                  Documento da Licença
+                  Documento Profissional
                 </label>
                 <input
                   type="file"
@@ -155,7 +198,7 @@ export default function CadastrarFarmacia() {
 
               <div>
                 <label className="block mb-2 font-semibold text-slate-700">
-                  Documento do Responsável
+                  Documento de Identificação
                 </label>
                 <input
                   type="file"

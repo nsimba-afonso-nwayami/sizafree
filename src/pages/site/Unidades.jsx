@@ -10,7 +10,7 @@ import UnidadeImg4 from "../../assets/img/hospital4.jpg";
 export default function Unidades() {
   return (
     <>
-      <title>Unidades de Saúde | Siza Free</title>
+      <title>Unidades de Saúde | Sisa Free</title>
 
       {/* Header */}
       <Header />
@@ -204,7 +204,7 @@ export default function Unidades() {
             </div>
             <div className="p-6 text-center">
               <h3 className="text-xl font-bold text-teal-800">
-                Clínica Siza Free
+                Clínica Sisa Free
               </h3>
               <p className="text-slate-500 mb-4">Clínica Geral - Luanda</p>
               <Link

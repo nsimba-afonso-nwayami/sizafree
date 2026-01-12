@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export default function CadastrarHospital() {
   return (
     <>
-      <title>Cadastrar Hospital | Siza Free</title>
+      <title>Cadastrar Hospital | Sisa Free</title>
 
       <section className="min-h-screen flex items-center justify-center bg-slate-50 px-6 py-12">
         <div className="w-full max-w-3xl bg-white rounded-2xl p-8 shadow-lg border border-slate-200">
@@ -19,7 +19,7 @@ export default function CadastrarHospital() {
           </h2>
 
           <p className="text-center text-slate-600 mb-8">
-            Complete os dados do hospital para validação no Siza Free.
+            Complete os dados do hospital para validação no Sisa Free.
           </p>
 
           <form className="space-y-6">

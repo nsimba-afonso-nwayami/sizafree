@@ -14,7 +14,7 @@ import EspecialistaImg8 from "../../assets/img/especialista8.jpg";
 export default function Especialistas() {
   return (
     <>
-      <title>Especialistas | Siza Free</title>
+      <title>Especialistas | Sisa Free</title>
 
       {/* Header */}
       <Header />

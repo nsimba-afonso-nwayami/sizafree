@@ -4,7 +4,7 @@ import Footer from "../../components/footer/Footer";
 export default function Agendar() {
   return (
     <>
-      <title>Agendar | Siza Free</title>
+      <title>Agendar | Sisa Free</title>
 
       {/* Header */}
       <Header />
@@ -22,7 +22,7 @@ export default function Agendar() {
 
           <p className="text-lg text-slate-600">
             Escolha o especialista, a unidade de saúde e o melhor horário para
-            você. O Siza Free conecta você ao cuidado médico de forma simples,
+            você. O Sisa Free conecta você ao cuidado médico de forma simples,
             segura e digital.
           </p>
         </div>

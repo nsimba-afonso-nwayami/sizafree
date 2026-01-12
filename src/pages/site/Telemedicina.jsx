@@ -6,7 +6,7 @@ import TelemedicinaVideo from "../../assets/video/telemedicina.mp4"; // mesmo v�
 export default function Telemedicina() {
   return (
     <>
-      <title>Telemedicina | Siza Free</title>
+      <title>Telemedicina | Sisa Free</title>
 
       {/* Header */}
       <Header />
@@ -24,7 +24,7 @@ export default function Telemedicina() {
 
           <p className="text-lg text-slate-600 mb-8">
             Converse com médicos nacionais e internacionais de forma prática e
-            segura, sem sair de casa. A Telemedicina do Siza Free conecta você a
+            segura, sem sair de casa. A Telemedicina do Sisa Free conecta você a
             profissionais qualificados para cuidar da sua saúde em qualquer
             lugar.
           </p>
@@ -59,7 +59,7 @@ export default function Telemedicina() {
             Por que usar Telemedicina?
           </h2>
           <p className="text-slate-600 max-w-3xl mx-auto">
-            A Telemedicina do Siza Free permite consultas rápidas, seguras e
+            A Telemedicina do Sisa Free permite consultas rápidas, seguras e
             eficientes, reduzindo deslocamentos, otimizando seu tempo e
             garantindo acompanhamento médico de qualidade.
           </p>

@@ -8,7 +8,7 @@ export default function Footer() {
         <div>
           <h3 className="text-2xl font-bold mb-4 flex items-center gap-2 drop-shadow-md">
             <i className="fa-solid fa-heart-pulse text-white"></i>
-            Siza Free
+            Sisa Free
           </h3>
           <p className="text-teal-100 drop-shadow-sm">
             Conectando pacientes, médicos, farmácias e centros médicos através
@@ -98,7 +98,7 @@ export default function Footer() {
             href="mailto:contato@sizafree.com"
             className="text-teal-100 hover:text-white transition drop-shadow-sm"
           >
-            Email: contato@sizafree.com
+            Email: contato@sisafree.com
           </a>
           <a
             href="tel:+244923000000"
@@ -145,7 +145,7 @@ export default function Footer() {
 
       {/* Copyright com borda mais visível */}
       <div className="mt-12 border-t-2 border-teal-300/80 pt-6 text-center text-teal-200 text-sm drop-shadow-sm">
-        © {new Date().getFullYear()} Siza Free. Todos os direitos reservados.
+        &copy; {new Date().getFullYear()} Sisa Free. Todos os direitos reservados.
       </div>
     </footer>
   );

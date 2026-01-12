@@ -5,7 +5,7 @@ import Footer from "../../components/footer/Footer";
 export default function NotFound() {
   return (
     <>
-      <title>Página não encontrada | Siza Free</title>
+      <title>Página não encontrada | Sisa Free</title>
 
       {/* Header */}
       <Header />
