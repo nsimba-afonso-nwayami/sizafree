@@ -15,14 +15,53 @@ export default function CadastrarEspecialista() {
           </div>
 
           <h2 className="text-3xl font-bold text-teal-800 text-center mb-2">
-            Complemento de Cadastro Médico
+            Cadastro de Especialista
           </h2>
 
           <p className="text-center text-slate-600 mb-8">
-            Complete as informações profissionais para validação no Siza Free.
+            Complete as informações profissionais para validação no Sisa Free.
           </p>
 
           <form className="space-y-6">
+            {/* DADOS BÁSICOS */}
+            <div className="grid md:grid-cols-2 gap-4">
+              {/* Nome */}
+              <div>
+                <label className="block mb-2 font-semibold text-slate-700">
+                  Nome Completo
+                </label>
+                <input
+                  type="text"
+                  placeholder="Digite o nome completo"
+                  className="w-full p-3 rounded-lg bg-slate-100 border border-slate-300 focus:outline-none focus:border-teal-500 transition"
+                />
+              </div>
+
+              {/* Telefone */}
+              <div>
+                <label className="block mb-2 font-semibold text-slate-700">
+                  Telefone
+                </label>
+                <input
+                  type="tel"
+                  placeholder="Ex: 9XX XXX XXX"
+                  className="w-full p-3 rounded-lg bg-slate-100 border border-slate-300 focus:outline-none focus:border-teal-500 transition"
+                />
+              </div>
+            </div>
+
+            {/* Email */}
+            <div>
+              <label className="block mb-2 font-semibold text-slate-700">
+                Email
+              </label>
+              <input
+                type="email"
+                placeholder="Digite o email"
+                className="w-full p-3 rounded-lg bg-slate-100 border border-slate-300 focus:outline-none focus:border-teal-500 transition"
+              />
+            </div>
+
             {/* Foto de perfil */}
             <div>
               <label className="block mb-2 font-semibold text-slate-700">
@@ -102,7 +141,7 @@ export default function CadastrarEspecialista() {
               </select>
             </div>
 
-            {/* Registro profissional */}
+            {/* Registro e Experiência */}
             <div className="grid md:grid-cols-2 gap-4">
               <div>
                 <label className="block mb-2 font-semibold text-slate-700">

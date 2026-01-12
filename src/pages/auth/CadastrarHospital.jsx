@@ -35,7 +35,7 @@ export default function CadastrarHospital() {
               />
             </div>
 
-            {/* Nome e registro */}
+            {/* Nome, contato e registro */}
             <div className="grid md:grid-cols-2 gap-4">
               <div>
                 <label className="block mb-2 font-semibold text-slate-700">
@@ -44,6 +44,28 @@ export default function CadastrarHospital() {
                 <input
                   type="text"
                   placeholder="Ex: Hospital Central"
+                  className="w-full p-3 rounded-lg bg-slate-100 border border-slate-300 focus:outline-none focus:border-teal-500 transition"
+                />
+              </div>
+
+              <div>
+                <label className="block mb-2 font-semibold text-slate-700">
+                  Telefone
+                </label>
+                <input
+                  type="tel"
+                  placeholder="Ex: 9XX XXX XXX"
+                  className="w-full p-3 rounded-lg bg-slate-100 border border-slate-300 focus:outline-none focus:border-teal-500 transition"
+                />
+              </div>
+
+              <div>
+                <label className="block mb-2 font-semibold text-slate-700">
+                  Email
+                </label>
+                <input
+                  type="email"
+                  placeholder="contato@hospital.com"
                   className="w-full p-3 rounded-lg bg-slate-100 border border-slate-300 focus:outline-none focus:border-teal-500 transition"
                 />
               </div>
