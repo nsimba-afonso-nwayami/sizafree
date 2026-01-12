@@ -177,7 +177,7 @@ export default function HistoricoPaciente() {
             Visualização detalhada do histórico clínico do paciente.
           </p>
 
-          {/* Cards de informação */}
+          {/* Cards principais */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
             <div className="bg-slate-50 border border-teal-200 rounded-xl p-5">
               <div className="flex items-center gap-3 mb-2">
@@ -220,8 +220,29 @@ export default function HistoricoPaciente() {
             </div>
           </div>
 
+          {/* Status clínico */}
+          <div className="bg-slate-50 border border-teal-200 rounded-xl p-6 mb-8">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-10 h-10 flex items-center justify-center rounded-full bg-teal-500 text-white">
+                <i className="fas fa-heartbeat"></i>
+              </div>
+              <h4 className="text-lg font-bold text-teal-800">
+                Status Clínico
+              </h4>
+            </div>
+
+            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-600/20 text-green-800 text-sm font-semibold">
+              <i className="fas fa-check-circle"></i>
+              Alta
+            </span>
+
+            {/* Para outro cenário, exemplo:
+      <span className="bg-yellow-400/30 text-yellow-800">Em acompanhamento</span>
+      */}
+          </div>
+
           {/* Observações médicas */}
-          <div className="bg-teal-50 border border-teal-200 rounded-xl p-6">
+          <div className="bg-teal-50 border border-teal-200 rounded-xl p-6 mb-8">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-10 h-10 flex items-center justify-center rounded-full bg-teal-500 text-white">
                 <i className="fas fa-notes-medical"></i>
@@ -236,6 +257,40 @@ export default function HistoricoPaciente() {
               relevantes. Orientado repouso relativo, hidratação adequada e
               retorno imediato em caso de agravamento dos sintomas.
             </p>
+          </div>
+
+          {/* Anexos / Exames */}
+          <div className="bg-slate-50 border border-teal-200 rounded-xl p-6">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-10 h-10 flex items-center justify-center rounded-full bg-teal-500 text-white">
+                <i className="fas fa-paperclip"></i>
+              </div>
+              <h4 className="text-lg font-bold text-teal-800">
+                Anexos e Exames
+              </h4>
+            </div>
+
+            <ul className="space-y-3">
+              <li className="flex items-center justify-between bg-white border border-slate-200 rounded-lg px-4 py-3">
+                <span className="flex items-center gap-3 text-slate-700">
+                  <i className="fas fa-file-pdf text-red-500"></i>
+                  Exame_de_Sangue.pdf
+                </span>
+                <button className="text-teal-500 hover:text-teal-600 font-semibold text-sm">
+                  Baixar
+                </button>
+              </li>
+
+              <li className="flex items-center justify-between bg-white border border-slate-200 rounded-lg px-4 py-3">
+                <span className="flex items-center gap-3 text-slate-700">
+                  <i className="fas fa-file-image text-blue-500"></i>
+                  Raio_X_Torax.png
+                </span>
+                <button className="text-teal-500 hover:text-teal-600 font-semibold text-sm">
+                  Baixar
+                </button>
+              </li>
+            </ul>
           </div>
         </div>
       </Modal>
