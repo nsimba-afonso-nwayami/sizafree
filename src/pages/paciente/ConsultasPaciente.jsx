@@ -1,7 +1,8 @@
+// src/pages/ConsultasPaciente.jsx
 import { Link } from "react-router-dom";
 import PacienteLayout from "./components/PacienteLayout";
 import { useState } from "react";
-import Modal from "./components/Modal"; // importando o modal
+import Modal from "./components/Modal"; // Modal reutilizável
 
 export default function ConsultasPaciente() {
   const [openModal, setOpenModal] = useState(false);
@@ -145,7 +146,6 @@ export default function ConsultasPaciente() {
                   >
                     <i className="fas fa-eye"></i>
                   </Link>
-
                   <button
                     className="text-red-400 hover:text-red-500 cursor-pointer"
                     title="Cancelar Consulta"
@@ -163,12 +163,10 @@ export default function ConsultasPaciente() {
           <p className="opacity-70 text-xs sm:text-sm">
             Mostrando 1 a 4 de 120 consultas
           </p>
-
           <div className="flex gap-2">
             <button className="px-3 py-1 bg-slate-50 border border-slate-300 rounded-lg text-sm hover:bg-slate-100 transition cursor-pointer">
               <i className="fas fa-chevron-left"></i>
             </button>
-
             <button className="px-4 py-1 bg-teal-500 rounded-lg text-sm font-bold text-white cursor-pointer">
               1
             </button>
@@ -178,7 +176,6 @@ export default function ConsultasPaciente() {
             <button className="px-4 py-1 bg-slate-50 border border-slate-300 rounded-lg text-sm hover:bg-slate-100 transition cursor-pointer">
               3
             </button>
-
             <button className="px-3 py-1 bg-slate-50 border border-slate-300 rounded-lg text-sm hover:bg-slate-100 transition cursor-pointer">
               <i className="fas fa-chevron-right"></i>
             </button>
@@ -186,15 +183,14 @@ export default function ConsultasPaciente() {
         </div>
       </div>
 
-      {/* Modal de teste */}
+      {/* Modal de Agendamento */}
       <Modal
         isOpen={openModal}
         onClose={() => setOpenModal(false)}
         title="Agendar Consulta"
         icon="fas fa-calendar-alt"
       >
-        {/* Formulário de agendamento */}
-        <div className="max-w-3xl mx-auto p-1 overflow-y-auto h-full">
+        <div className="max-w-3xl mx-auto h-full">
           <h3 className="text-xl font-bold text-teal-800 mb-4 text-center">
             Dados da Consulta
           </h3>
@@ -203,7 +199,9 @@ export default function ConsultasPaciente() {
             agendamento da sua consulta.
           </p>
 
-          <form className="grid gap-6">
+          <form className="grid gap-6 pb-12">
+            {" "}
+            {/* pb extra para scroll */}
             <div>
               <label className="block text-slate-800 font-medium mb-2">
                 Nome Completo
@@ -215,7 +213,6 @@ export default function ConsultasPaciente() {
                 required
               />
             </div>
-
             <div>
               <label className="block text-slate-800 font-medium mb-2">
                 Email
@@ -227,7 +224,6 @@ export default function ConsultasPaciente() {
                 required
               />
             </div>
-
             <div>
               <label className="block text-slate-800 font-medium mb-2">
                 Telefone
@@ -239,7 +235,6 @@ export default function ConsultasPaciente() {
                 required
               />
             </div>
-
             <div>
               <label className="block text-slate-800 font-medium mb-2">
                 Especialista
@@ -256,7 +251,6 @@ export default function ConsultasPaciente() {
                 <option>Dr. Miguel Rocha – Ortopedista</option>
               </select>
             </div>
-
             <div>
               <label className="block text-slate-800 font-medium mb-2">
                 Unidade de Saúde
@@ -273,7 +267,6 @@ export default function ConsultasPaciente() {
                 <option>Clínica Girassol</option>
               </select>
             </div>
-
             <div>
               <label className="block text-slate-800 font-medium mb-2">
                 Data da Consulta
@@ -284,7 +277,6 @@ export default function ConsultasPaciente() {
                 required
               />
             </div>
-
             <div>
               <label className="block text-slate-800 font-medium mb-2">
                 Horário
@@ -295,7 +287,6 @@ export default function ConsultasPaciente() {
                 required
               />
             </div>
-
             <button
               type="submit"
               className="w-full mt-4 bg-teal-500 hover:bg-teal-600 text-white font-semibold py-4 rounded-lg transition cursor-pointer"
