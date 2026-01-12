@@ -104,7 +104,7 @@ export default function SidebarPaciente({ sidebarOpen, setSidebarOpen }) {
       {/* Overlay mobile */}
       {sidebarOpen && (
         <div
-          className="fixed inset-0 bg-black/30 md:hidden z-40"
+          className="fixed inset-0 bg-black/40 backdrop-blur-sm md:hidden z-40"
           onClick={() => setSidebarOpen(false)}
         ></div>
       )}
