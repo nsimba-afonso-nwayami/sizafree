@@ -94,7 +94,6 @@ export default function DetalhesConsultaPaciente() {
         </div>
 
         {/* AÇÕES */}
-        {/* AÇÕES */}
         <div className="flex flex-col sm:flex-row gap-4 justify-end pt-4 border-t border-slate-200">
           <button
             className="px-6 py-3 bg-slate-100 hover:bg-slate-200 transition rounded-lg font-semibold text-slate-700 cursor-pointer"
