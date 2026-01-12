@@ -1,4 +1,3 @@
-// src/pages/ConsultasPaciente.jsx
 import { Link } from "react-router-dom";
 import PacienteLayout from "./components/PacienteLayout";
 import { useState } from "react";
