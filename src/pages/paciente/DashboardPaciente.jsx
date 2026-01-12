@@ -55,7 +55,7 @@ export default function DashboardPaciente() {
             </h3>
 
             <Link
-              to="/paciente/consultas"
+              to="/dashboard/paciente/consultas"
               className="flex items-center gap-2 px-4 py-2 bg-teal-500 hover:bg-teal-600 text-white text-sm font-semibold rounded-lg transition"
             >
               <i className="fas fa-plus"></i>
