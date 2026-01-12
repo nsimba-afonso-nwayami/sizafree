@@ -37,7 +37,7 @@ export default function Modal({ isOpen, onClose, title, icon, children }) {
           <h2 className="text-2xl font-bold text-teal-800">{title}</h2>
           <button
             onClick={onClose}
-            className="ml-auto text-slate-500 hover:text-teal-500 text-3xl font-bold transition-colors"
+            className="ml-auto cursor-pointer text-slate-500 hover:text-teal-500 text-3xl font-bold transition-colors"
             title="Fechar"
           >
             <i className="fas fa-times"></i>
