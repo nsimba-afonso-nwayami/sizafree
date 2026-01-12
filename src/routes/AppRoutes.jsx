@@ -28,6 +28,7 @@ import DetalhesConsultaPaciente from "../pages/paciente/DetalhesConsultaPaciente
 import HistoricoPaciente from "../pages/paciente/HistoricoPaciente";
 import DocumentosPaciente from "../pages/paciente/DocumentosPaciente";
 import PrivacidadePaciente from "../pages/paciente/PrivacidadePaciente";
+import NotificacoesPaciente from "../pages/paciente/NotificacoesPaciente";
 import NotFoundPaciente from "../pages/paciente/NotFoundPaciente";
 
 export default function AppRoutes () {
@@ -62,6 +63,7 @@ export default function AppRoutes () {
                 <Route path="historico" element={<HistoricoPaciente />} />
                 <Route path="documentos" element={<DocumentosPaciente />} />
                 <Route path="privacidade" element={<PrivacidadePaciente />} />
+                <Route path="notificacoes" element={<NotificacoesPaciente />} />
                 <Route path="*" element={<NotFoundPaciente />} />
             </Route>
         </Routes>
