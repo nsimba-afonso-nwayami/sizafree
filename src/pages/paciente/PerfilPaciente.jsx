@@ -2,20 +2,6 @@ import { useState } from "react";
 import PacienteLayout from "./components/PacienteLayout";
 
 export default function PerfilPaciente() {
-  const [previewImage, setPreviewImage] = useState(
-    "https://via.placeholder.com/120"
-  );
-
-  const handleImageChange = (e) => {
-    const file = e.target.files[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onloadend = () => {
-        setPreviewImage(reader.result);
-      };
-      reader.readAsDataURL(file);
-    }
-  };
 
   return (
     <PacienteLayout title="Perfil do Paciente">
@@ -26,7 +12,7 @@ export default function PerfilPaciente() {
             {/* Foto */}
             <div className="shrink-0">
               <img
-                src={previewImage}
+                src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSgJ1FO3FHIR9B-BULDxnMCDBg19lJSDqozeZ9GvQyMZVwc1D01Ck1GVRNjOCUW"
                 alt="Paciente"
                 className="w-28 h-28 md:w-32 md:h-32 rounded-full border-4 border-teal-500 object-cover"
               />
@@ -67,7 +53,6 @@ export default function PerfilPaciente() {
               <input
                 type="file"
                 accept="image/*"
-                onChange={handleImageChange}
                 className="w-full border border-slate-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-teal-500"
               />
             </div>
