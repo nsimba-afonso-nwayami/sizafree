@@ -1,7 +1,11 @@
 import { Link } from "react-router-dom";
 import PacienteLayout from "./components/PacienteLayout";
+import { useState } from "react";
+import Modal from "./components/Modal"; // importando o modal
 
 export default function ConsultasPaciente() {
+  const [openModal, setOpenModal] = useState(false);
+
   const dummyConsultas = [
     {
       id: 101,
@@ -62,7 +66,10 @@ export default function ConsultasPaciente() {
               className="p-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-teal-500 w-full sm:flex-1"
             />
 
-            <button className="px-5 py-2 bg-teal-500 hover:bg-teal-600 transition font-semibold rounded-lg shadow-lg flex items-center justify-center gap-2 text-white cursor-pointer">
+            <button
+              onClick={() => setOpenModal(true)}
+              className="px-5 py-2 bg-teal-500 hover:bg-teal-600 transition font-semibold rounded-lg shadow-lg flex items-center justify-center gap-2 text-white cursor-pointer"
+            >
               <i className="fas fa-calendar-plus"></i>
               Agendar Nova Consulta
             </button>
@@ -178,6 +185,126 @@ export default function ConsultasPaciente() {
           </div>
         </div>
       </div>
+
+      {/* Modal de teste */}
+      <Modal
+        isOpen={openModal}
+        onClose={() => setOpenModal(false)}
+        title="Agendar Consulta"
+        icon="fas fa-calendar-alt"
+      >
+        {/* Formulário de agendamento */}
+        <div className="max-w-3xl mx-auto p-1 overflow-y-auto h-full">
+          <h3 className="text-xl font-bold text-teal-800 mb-4 text-center">
+            Dados da Consulta
+          </h3>
+          <p className="text-slate-500 mb-8 text-center">
+            Preencha corretamente as informações abaixo para concluir o
+            agendamento da sua consulta.
+          </p>
+
+          <form className="grid gap-6">
+            <div>
+              <label className="block text-slate-800 font-medium mb-2">
+                Nome Completo
+              </label>
+              <input
+                type="text"
+                placeholder="Digite seu nome completo"
+                className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-teal-500 focus:outline-none"
+                required
+              />
+            </div>
+
+            <div>
+              <label className="block text-slate-800 font-medium mb-2">
+                Email
+              </label>
+              <input
+                type="email"
+                placeholder="Digite seu email"
+                className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-teal-500 focus:outline-none"
+                required
+              />
+            </div>
+
+            <div>
+              <label className="block text-slate-800 font-medium mb-2">
+                Telefone
+              </label>
+              <input
+                type="tel"
+                placeholder="Ex: 9XX XXX XXX"
+                className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-teal-500 focus:outline-none"
+                required
+              />
+            </div>
+
+            <div>
+              <label className="block text-slate-800 font-medium mb-2">
+                Especialista
+              </label>
+              <select
+                className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-teal-500 focus:outline-none"
+                required
+              >
+                <option value="">Selecione o especialista</option>
+                <option>Dr. Carlos Silva – Clínico Geral</option>
+                <option>Dra. Ana Mendes – Pediatra</option>
+                <option>Dr. João Pires – Cardiologista</option>
+                <option>Dra. Sofia Costa – Ginecologista</option>
+                <option>Dr. Miguel Rocha – Ortopedista</option>
+              </select>
+            </div>
+
+            <div>
+              <label className="block text-slate-800 font-medium mb-2">
+                Unidade de Saúde
+              </label>
+              <select
+                className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-teal-500 focus:outline-none"
+                required
+              >
+                <option value="">Selecione a unidade</option>
+                <option>Hospital Geral de Luanda</option>
+                <option>Hospital Josina Machel</option>
+                <option>Hospital Militar Principal</option>
+                <option>Hospital Divina Providência</option>
+                <option>Clínica Girassol</option>
+              </select>
+            </div>
+
+            <div>
+              <label className="block text-slate-800 font-medium mb-2">
+                Data da Consulta
+              </label>
+              <input
+                type="date"
+                className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-teal-500 focus:outline-none"
+                required
+              />
+            </div>
+
+            <div>
+              <label className="block text-slate-800 font-medium mb-2">
+                Horário
+              </label>
+              <input
+                type="time"
+                className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-teal-500 focus:outline-none"
+                required
+              />
+            </div>
+
+            <button
+              type="submit"
+              className="w-full mt-4 bg-teal-500 hover:bg-teal-600 text-white font-semibold py-4 rounded-lg transition cursor-pointer"
+            >
+              Confirmar Agendamento
+            </button>
+          </form>
+        </div>
+      </Modal>
     </PacienteLayout>
   );
 }
