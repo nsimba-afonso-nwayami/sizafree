@@ -35,7 +35,7 @@ export default function CadastrarHospital() {
               />
             </div>
 
-            {/* Nome, contato e registro */}
+            {/* Nome, contato, tipo e registro */}
             <div className="grid md:grid-cols-2 gap-4">
               <div>
                 <label className="block mb-2 font-semibold text-slate-700">
@@ -71,6 +71,20 @@ export default function CadastrarHospital() {
               </div>
 
               <div>
+                <label className="block mb-2 font-semibold text-slate-700">
+                  Tipo de Hospital
+                </label>
+                <select className="w-full p-3 rounded-lg bg-slate-100 border border-slate-300 focus:outline-none focus:border-teal-500 transition">
+                  <option value="">Selecione o tipo</option>
+                  <option>Hospital Público</option>
+                  <option>Hospital Privado</option>
+                  <option>Clínica</option>
+                  <option>Centro de Saúde</option>
+                  <option>Hospital Universitário</option>
+                </select>
+              </div>
+
+              <div className="md:col-span-2">
                 <label className="block mb-2 font-semibold text-slate-700">
                   Nº de Registro / Alvará
                 </label>
@@ -151,7 +165,7 @@ export default function CadastrarHospital() {
             {/* Botão */}
             <button
               type="submit"
-              className="w-full py-3 mt-4 rounded-xl font-bold bg-teal-500 hover:bg-teal-600 transition text-white"
+              className="w-full cursor-pointer py-3 mt-4 rounded-xl font-bold bg-teal-500 hover:bg-teal-600 transition text-white"
             >
               Enviar para Verificação
             </button>

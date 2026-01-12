@@ -249,7 +249,7 @@ export default function CadastrarEspecialista() {
             {/* Botão */}
             <button
               type="submit"
-              className="w-full py-3 mt-4 rounded-xl font-bold bg-teal-500 hover:bg-teal-600 transition text-white"
+              className="w-full cursor-pointer py-3 mt-4 rounded-xl font-bold bg-teal-500 hover:bg-teal-600 transition text-white"
             >
               Enviar para Verificação
             </button>
