@@ -93,7 +93,7 @@ export default function SidebarPaciente({ sidebarOpen, setSidebarOpen }) {
         <div className="pt-6 border-t border-teal-700">
           <button
             onClick={handleLogout}
-            className="flex items-center w-full p-3 rounded-lg text-white hover:bg-red-500/20 transition font-semibold"
+            className="flex items-center cursor-pointer w-full p-3 rounded-lg text-white hover:bg-red-500/20 transition font-semibold"
           >
             <i className="fas fa-sign-out-alt mr-3"></i>
             Sair
