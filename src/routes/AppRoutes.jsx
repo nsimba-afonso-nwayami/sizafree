@@ -45,6 +45,7 @@ import NotFoundEspecialista from "../pages/especialista/NotFoundEspecialista";
 //Rotas do hospital
 import DashboardHospital from "../pages/hospital/DashboardHospital";
 import PacientesHospital from "../pages/hospital/PacientesHospital";
+import HistoricoHospital from "../pages/hospital/HistoricoHospital";
 import NotFoundHospital from "../pages/hospital/NotFoundHospital";
 
 export default function AppRoutes () {
@@ -100,6 +101,7 @@ export default function AppRoutes () {
             <Route path="/dashboard/hospital/">
                 <Route path="" element={<DashboardHospital />} />
                 <Route path="pacientes" element={<PacientesHospital />} />
+                <Route path="historico" element={<HistoricoHospital />} />
                 <Route path="*" element={<NotFoundHospital />} />
             </Route>
         </Routes>
