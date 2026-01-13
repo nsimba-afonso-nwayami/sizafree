@@ -95,29 +95,89 @@ export default function HistoricoEspecialista() {
           icon="fas fa-file-medical"
         >
           <div className="max-w-3xl mx-auto space-y-6">
+            {/* INFORMAÇÕES PRINCIPAIS */}
             <div className="bg-teal-50 border border-teal-200 rounded-xl p-6 shadow-sm">
-              <div className="flex justify-between mb-2">
-                <span className="font-medium text-teal-800">Paciente</span>
-                <span className="text-slate-600">João da Silva</span>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <p className="text-sm text-slate-500">Paciente</p>
+                  <p className="font-semibold text-slate-800">João da Silva</p>
+                </div>
+
+                <div>
+                  <p className="text-sm text-slate-500">Data</p>
+                  <p className="font-semibold text-slate-800">10/01/2026</p>
+                </div>
+
+                <div>
+                  <p className="text-sm text-slate-500">Tipo</p>
+                  <p className="font-semibold text-slate-800">Consulta</p>
+                </div>
+
+                <div>
+                  <p className="text-sm text-slate-500">Especialidade</p>
+                  <p className="font-semibold text-slate-800">Clínica Geral</p>
+                </div>
               </div>
-              <div className="flex justify-between mb-2">
-                <span className="font-medium text-teal-800">Data</span>
-                <span className="text-slate-600">10/01/2026</span>
-              </div>
-              <div className="flex justify-between mb-2">
-                <span className="font-medium text-teal-800">Tipo</span>
-                <span className="text-slate-600">Consulta</span>
-              </div>
-              <div className="mb-4">
-                <span className="block font-medium text-teal-800 mb-1">
-                  Observações
-                </span>
-                <p className="text-slate-600 leading-relaxed">
-                  Paciente apresentou melhora significativa após medicação.
-                </p>
-              </div>
-              <button className="px-4 py-2 bg-teal-500 hover:bg-teal-600 text-white rounded-lg font-semibold cursor-pointer flex items-center gap-2">
-                <i className="fas fa-download"></i> Baixar Histórico
+            </div>
+
+            {/* OBSERVAÇÕES */}
+            <div className="bg-white border border-slate-200 rounded-xl p-6">
+              <h3 className="text-lg font-semibold text-teal-800 mb-2">
+                Observações Médicas
+              </h3>
+              <p className="text-slate-600 leading-relaxed">
+                Paciente apresentou melhora significativa após uso da medicação
+                prescrita. Orientado manter acompanhamento e retorno em 30 dias.
+              </p>
+            </div>
+
+            {/* ANEXOS / EXAMES */}
+            <div className="bg-white border border-slate-200 rounded-xl p-6">
+              <h3 className="text-lg font-semibold text-teal-800 mb-4">
+                Anexos / Exames
+              </h3>
+
+              <ul className="divide-y divide-slate-200">
+                <li className="py-3 flex justify-between items-center">
+                  <div className="flex items-center gap-3">
+                    <i className="fas fa-file-pdf text-red-500 text-lg"></i>
+                    <div>
+                      <p className="font-medium text-slate-800">
+                        Exame_Sangue.pdf
+                      </p>
+                      <p className="text-sm text-slate-500">
+                        Exame Laboratorial
+                      </p>
+                    </div>
+                  </div>
+
+                  <button className="px-3 py-1 cursor-pointer bg-teal-500 hover:bg-teal-600 text-white text-sm rounded-lg flex items-center gap-1">
+                    <i className="fas fa-download"></i> Baixar
+                  </button>
+                </li>
+
+                <li className="py-3 flex justify-between items-center">
+                  <div className="flex items-center gap-3">
+                    <i className="fas fa-file-alt text-slate-500 text-lg"></i>
+                    <div>
+                      <p className="font-medium text-slate-800">
+                        Relatorio_Clinico.docx
+                      </p>
+                      <p className="text-sm text-slate-500">Relatório Médico</p>
+                    </div>
+                  </div>
+
+                  <button className="px-3 py-1 cursor-pointer bg-teal-500 hover:bg-teal-600 text-white text-sm rounded-lg flex items-center gap-1">
+                    <i className="fas fa-download"></i> Baixar
+                  </button>
+                </li>
+              </ul>
+            </div>
+
+            {/* AÇÃO FINAL */}
+            <div className="flex justify-end gap-3">
+              <button className="px-6 py-2 cursor-pointer bg-slate-200 hover:bg-slate-300 text-slate-800 rounded-lg font-medium transition">
+                Fechar
               </button>
             </div>
           </div>
