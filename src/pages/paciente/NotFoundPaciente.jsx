@@ -8,7 +8,7 @@ export default function NotFoundPaciente() {
       <PacienteLayout title="Página não encontrada">
         <main className="flex flex-col items-center justify-center min-h-[70vh] bg-slate-50 px-6 text-center py-24">
           {/* Ícone animado */}
-          <i className="fa-solid fa-heart-pulse text-teal-500 text-5xl mb-4 fa-beat"></i>
+          <i className="fa-solid fa-user text-teal-500 text-5xl mb-4 fa-beat"></i>
 
           {/* Número 404 */}
           <h1 className="text-6xl font-extrabold text-teal-500 mb-4">404</h1>
