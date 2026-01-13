@@ -33,6 +33,7 @@ import NotFoundPaciente from "../pages/paciente/NotFoundPaciente";
 
 //Rotas do especialista
 import DashboardEspecialista from "../pages/especialista/DashboardEspecialista";
+import PerfilEspecialista from "../pages/especialista/PerfilEspecialista";
 import NotFoundEspecialista from "../pages/especialista/NotFoundEspecialista";
 
 export default function AppRoutes () {
@@ -74,6 +75,7 @@ export default function AppRoutes () {
             {/*Rotas do especialista */}
             <Route path="/dashboard/especialista/">
                 <Route path="" element={<DashboardEspecialista />} />
+                <Route path="perfil" element={<PerfilEspecialista />} />
                 <Route path="*" element={<NotFoundEspecialista />} />
             </Route>
         </Routes>
