@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default function DashboardEspecialista() {
   return (
     <>
-    <title>Dashboard Especialista</title>
+      <title>Dashboard Especialista</title>
       <EspecialistaLayout title="Dashboard do Especialista">
         {/* RESUMO RÁPIDO */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
