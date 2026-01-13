@@ -42,6 +42,10 @@ import PrescricoesEspecialista from "../pages/especialista/PrescricoesEspecialis
 import NotificacoesEspecialista from "../pages/especialista/NotificacoesEspecialista";
 import NotFoundEspecialista from "../pages/especialista/NotFoundEspecialista";
 
+//Rotas do hospital
+import DashboardHospital from "../pages/hospital/DashboardHospital";
+import NotFoundHospital from "../pages/hospital/NotFoundHospital";
+
 export default function AppRoutes () {
     return (
         <Routes>
@@ -89,6 +93,12 @@ export default function AppRoutes () {
                 <Route path="prescricoes" element={<PrescricoesEspecialista />} />
                 <Route path="notificacoes" element={<NotificacoesEspecialista />} />
                 <Route path="*" element={<NotFoundEspecialista />} />
+            </Route>
+
+            {/*Rotas do hospital */}
+            <Route path="/dashboard/hospital/">
+                <Route path="" element={<DashboardHospital />} />
+                <Route path="*" element={<NotFoundHospital />} />
             </Route>
         </Routes>
     )
