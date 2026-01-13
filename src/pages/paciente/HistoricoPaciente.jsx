@@ -58,7 +58,7 @@ export default function HistoricoPaciente() {
   return (
     <PacienteLayout title="Histórico Clínico do Paciente">
       <>
-      <title>Histórico Clínico | Dashboard Paciente</title>
+        <title>Histórico Clínico | Dashboard Paciente</title>
         {/* CARD DE FILTROS */}
         <div className="bg-white p-6 rounded-xl shadow-sm mb-6">
           <div className="flex flex-col sm:flex-row gap-4 items-center">
