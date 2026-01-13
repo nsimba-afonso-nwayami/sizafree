@@ -40,7 +40,7 @@ export default function SidebarEspecialista({ sidebarOpen, setSidebarOpen }) {
           {/* Navegação */}
           <nav className="space-y-3 text-sm">
             <Link
-              to="/dashboard/paciente"
+              to="/dashboard/especialista"
               className="block p-3 rounded-lg text-white hover:bg-teal-700 transition font-medium"
             >
               <i className="fas fa-gauge-high mr-3 text-teal-200"></i>
@@ -48,23 +48,39 @@ export default function SidebarEspecialista({ sidebarOpen, setSidebarOpen }) {
             </Link>
 
             <Link
-              to="/dashboard/paciente/perfil"
+              to="/dashboard/especialista/perfil"
               className="block p-3 rounded-lg text-white hover:bg-teal-700 transition font-medium"
             >
-              <i className="fas fa-user mr-3 text-teal-200"></i>
-              Meu Perfil
+              <i className="fas fa-id-card mr-3 text-teal-200"></i>
+              Perfil Profissional
             </Link>
 
             <Link
-              to="/dashboard/paciente/consultas"
+              to="/dashboard/especialista/solicitacoes"
               className="block p-3 rounded-lg text-white hover:bg-teal-700 transition font-medium"
             >
-              <i className="fas fa-calendar-check mr-3 text-teal-200"></i>
-              Consultas
+              <i className="fas fa-inbox mr-3 text-teal-200"></i>
+              Solicitações
             </Link>
 
             <Link
-              to="/dashboard/paciente/historico"
+              to="/dashboard/especialista/agenda"
+              className="block p-3 rounded-lg text-white hover:bg-teal-700 transition font-medium"
+            >
+              <i className="fas fa-calendar-alt mr-3 text-teal-200"></i>
+              Agenda
+            </Link>
+
+            <Link
+              to="/dashboard/especialista/pacientes"
+              className="block p-3 rounded-lg text-white hover:bg-teal-700 transition font-medium"
+            >
+              <i className="fas fa-user-injured mr-3 text-teal-200"></i>
+              Pacientes
+            </Link>
+
+            <Link
+              to="/dashboard/especialista/historico"
               className="block p-3 rounded-lg text-white hover:bg-teal-700 transition font-medium"
             >
               <i className="fas fa-notes-medical mr-3 text-teal-200"></i>
@@ -72,19 +88,11 @@ export default function SidebarEspecialista({ sidebarOpen, setSidebarOpen }) {
             </Link>
 
             <Link
-              to="/dashboard/paciente/documentos"
+              to="/dashboard/especialista/prescricoes"
               className="block p-3 rounded-lg text-white hover:bg-teal-700 transition font-medium"
             >
-              <i className="fas fa-folder-open mr-3 text-teal-200"></i>
-              Documentos
-            </Link>
-
-            <Link
-              to="/dashboard/paciente/privacidade"
-              className="block p-3 rounded-lg text-white hover:bg-teal-700 transition font-medium"
-            >
-              <i className="fas fa-shield-halved mr-3 text-teal-200"></i>
-              Privacidade
+              <i className="fas fa-file-prescription mr-3 text-teal-200"></i>
+              Prescrições
             </Link>
           </nav>
         </div>
