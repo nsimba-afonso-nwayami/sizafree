@@ -108,10 +108,10 @@ export default function DashboardEspecialista() {
                   </p>
                 </div>
                 <div className="flex gap-2">
-                  <button className="px-3 py-1 text-sm bg-teal-500 hover:bg-teal-600 text-white rounded-lg">
+                  <button className="px-3 py-1 cursor-pointer text-sm bg-teal-500 hover:bg-teal-600 text-white rounded-lg">
                     Aceitar
                   </button>
-                  <button className="px-3 py-1 text-sm bg-slate-200 hover:bg-slate-300 text-slate-800 rounded-lg">
+                  <button className="px-3 py-1 cursor-pointer text-sm bg-slate-200 hover:bg-slate-300 text-slate-800 rounded-lg">
                     Recusar
                   </button>
                 </div>
@@ -125,10 +125,10 @@ export default function DashboardEspecialista() {
                   </p>
                 </div>
                 <div className="flex gap-2">
-                  <button className="px-3 py-1 text-sm bg-teal-500 hover:bg-teal-600 text-white rounded-lg">
+                  <button className="px-3 py-1 cursor-pointer text-sm bg-teal-500 hover:bg-teal-600 text-white rounded-lg">
                     Aceitar
                   </button>
-                  <button className="px-3 py-1 text-sm bg-slate-200 hover:bg-slate-300 text-slate-800 rounded-lg">
+                  <button className="px-3 py-1 cursor-pointer text-sm bg-slate-200 hover:bg-slate-300 text-slate-800 rounded-lg">
                     Recusar
                   </button>
                 </div>
