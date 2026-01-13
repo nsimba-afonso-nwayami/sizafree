@@ -30,7 +30,7 @@ export default function HeaderHospital({ sidebarOpen, setSidebarOpen, title }) {
 
         <div className="flex items-center gap-3">
           <span className="text-sm text-teal-200 hidden sm:block">
-            Especialista
+            Hospital
           </span>
           <Link to="/dashboard/hospital/perfil" className="w-9 h-9 bg-teal-500 rounded-full flex items-center justify-center">
             <i className="fas fa-user text-white"></i>
