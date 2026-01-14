@@ -46,6 +46,13 @@ import NotFoundEspecialista from "../pages/especialista/NotFoundEspecialista";
 import DashboardHospital from "../pages/hospital/DashboardHospital";
 import PacientesHospital from "../pages/hospital/PacientesHospital";
 import HistoricoHospital from "../pages/hospital/HistoricoHospital";
+import AgendaHospital from "../pages/hospital/AgendaHospital";
+import SolicitacoesHospital from "../pages/hospital/SolicitacoesHospital";
+import PrescricoesHospital from "../pages/hospital/PrescricoesHospital";
+import ProfissionaisHospital from "../pages/hospital/ProfissionaisHospital";
+import RelatoriosHospital from "../pages/hospital/RelatoriosHospital";
+import ConfiguracoesHospital from "../pages/hospital/ConfiguracoesHospital";
+import NotificacoesHospital from "../pages/hospital/NotificacoesHospital";
 import NotFoundHospital from "../pages/hospital/NotFoundHospital";
 
 export default function AppRoutes () {
@@ -102,6 +109,13 @@ export default function AppRoutes () {
                 <Route path="" element={<DashboardHospital />} />
                 <Route path="pacientes" element={<PacientesHospital />} />
                 <Route path="historico" element={<HistoricoHospital />} />
+                <Route path="agenda" element={<AgendaHospital />} />
+                <Route path="solicitacoes" element={<SolicitacoesHospital />} />
+                <Route path="prescricoes" element={<PrescricoesHospital />} />
+                <Route path="profissionais" element={<ProfissionaisHospital />} />
+                <Route path="relatorios" element={<RelatoriosHospital />} />
+                <Route path="configuracoes" element={<ConfiguracoesHospital />} />
+                <Route path="notificacoes" element={<NotificacoesHospital />} />
                 <Route path="*" element={<NotFoundHospital />} />
             </Route>
         </Routes>
