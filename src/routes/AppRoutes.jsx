@@ -55,6 +55,10 @@ import ConfiguracoesHospital from "../pages/hospital/ConfiguracoesHospital";
 import NotificacoesHospital from "../pages/hospital/NotificacoesHospital";
 import NotFoundHospital from "../pages/hospital/NotFoundHospital";
 
+//Rotas da farmácia
+import DashboardFarmacia from "../pages/farmacia/DashboardFarmacia";
+import NotFoundFarmacia from "../pages/farmacia/NotFoundFarmacia";
+
 export default function AppRoutes () {
     return (
         <Routes>
@@ -117,6 +121,12 @@ export default function AppRoutes () {
                 <Route path="configuracoes" element={<ConfiguracoesHospital />} />
                 <Route path="notificacoes" element={<NotificacoesHospital />} />
                 <Route path="*" element={<NotFoundHospital />} />
+            </Route>
+
+            {/*Rotas da farmácia */}
+            <Route path="/dashboard/farmacia/">
+                <Route path="" element={<DashboardFarmacia />} />
+                <Route path="*" element={<NotFoundFarmacia />} />
             </Route>
         </Routes>
     )
