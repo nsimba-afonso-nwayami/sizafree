@@ -57,6 +57,7 @@ import NotFoundHospital from "../pages/hospital/NotFoundHospital";
 
 //Rotas da farmácia
 import DashboardFarmacia from "../pages/farmacia/DashboardFarmacia";
+import ProfissionaisFarmacia from "../pages/farmacia/ProfissionaisFarmacia";
 import NotFoundFarmacia from "../pages/farmacia/NotFoundFarmacia";
 
 export default function AppRoutes () {
@@ -126,6 +127,7 @@ export default function AppRoutes () {
             {/*Rotas da farmácia */}
             <Route path="/dashboard/farmacia/">
                 <Route path="" element={<DashboardFarmacia />} />
+                <Route path="profissionais" element={<ProfissionaisFarmacia />} />
                 <Route path="*" element={<NotFoundFarmacia />} />
             </Route>
         </Routes>
