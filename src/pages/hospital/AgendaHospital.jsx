@@ -188,7 +188,10 @@ export default function AgendaHospital() {
             </div>
 
             <div className="flex justify-end">
-              <button className="px-6 py-2 bg-slate-200 hover:bg-slate-300 text-slate-800 rounded-lg cursor-pointer">
+              <button
+                onClick={() => setOpenDetalhes(false)}
+                className="px-6 py-2 bg-slate-200 hover:bg-slate-300 text-slate-800 rounded-lg cursor-pointer"
+              >
                 Fechar
               </button>
             </div>
