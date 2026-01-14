@@ -63,6 +63,13 @@ import HistoricoFarmacia from "../pages/farmacia/HistoricoFarmacia";
 import AgendaFarmacia from "../pages/farmacia/AgendaFarmacia";
 import SolicitacoesFarmacia from "../pages/farmacia/SolicitacoesFarmacia";
 import PrescricoesFarmacia from "../pages/farmacia/PrescricoesFarmacia";
+import ProdutosFarmacia from "../pages/farmacia/ProdutosFarmacia";
+import EstoqueFarmacia from "../pages/farmacia/EstoqueFarmacia";
+import VendasFarmacia from "../pages/farmacia/VendasFarmacia";
+import PedidosFarmacia from "../pages/farmacia/PedidosFarmacia";
+import RelatoriosFarmacia from "../pages/farmacia/RelatoriosFarmacia";
+import ConfiguracoesFarmacia from "../pages/farmacia/ConfiguracoesFarmacia";
+import NotificacoesFarmacia from "../pages/farmacia/NotificacoesFarmacia";
 import NotFoundFarmacia from "../pages/farmacia/NotFoundFarmacia";
 
 export default function AppRoutes () {
@@ -138,6 +145,13 @@ export default function AppRoutes () {
                 <Route path="agenda" element={<AgendaFarmacia />} />
                 <Route path="solicitacoes" element={<SolicitacoesFarmacia />} />
                 <Route path="prescricoes" element={<PrescricoesFarmacia />} />
+                <Route path="produtos" element={<ProdutosFarmacia />} />
+                <Route path="estoque" element={<EstoqueFarmacia />} />
+                <Route path="vendas" element={<VendasFarmacia />} />
+                <Route path="pedidos-online" element={<PedidosFarmacia />} />
+                <Route path="relatorios" element={<RelatoriosFarmacia />} />
+                <Route path="configuracoes" element={<ConfiguracoesFarmacia />} />
+                <Route path="notificacoes" element={<NotificacoesFarmacia />} />
                 <Route path="*" element={<NotFoundFarmacia />} />
             </Route>
         </Routes>
