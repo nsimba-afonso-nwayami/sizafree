@@ -59,6 +59,10 @@ import NotFoundHospital from "../pages/hospital/NotFoundHospital";
 import DashboardFarmacia from "../pages/farmacia/DashboardFarmacia";
 import ProfissionaisFarmacia from "../pages/farmacia/ProfissionaisFarmacia";
 import PacientesFarmacia from "../pages/farmacia/PacientesFarmacia";
+import HistoricoFarmacia from "../pages/farmacia/HistoricoFarmacia";
+import AgendaFarmacia from "../pages/farmacia/AgendaFarmacia";
+import SolicitacoesFarmacia from "../pages/farmacia/SolicitacoesFarmacia";
+import PrescricoesFarmacia from "../pages/farmacia/PrescricoesFarmacia";
 import NotFoundFarmacia from "../pages/farmacia/NotFoundFarmacia";
 
 export default function AppRoutes () {
@@ -130,6 +134,10 @@ export default function AppRoutes () {
                 <Route path="" element={<DashboardFarmacia />} />
                 <Route path="profissionais" element={<ProfissionaisFarmacia />} />
                 <Route path="pacientes" element={<PacientesFarmacia />} />
+                <Route path="historico" element={<HistoricoFarmacia />} />
+                <Route path="agenda" element={<AgendaFarmacia />} />
+                <Route path="solicitacoes" element={<SolicitacoesFarmacia />} />
+                <Route path="prescricoes" element={<PrescricoesFarmacia />} />
                 <Route path="*" element={<NotFoundFarmacia />} />
             </Route>
         </Routes>
