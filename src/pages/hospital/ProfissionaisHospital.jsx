@@ -34,7 +34,7 @@ export default function ProfissionaisHospital() {
       crm: "COREN 45678",
       status: "Pendente",
       email: "paulo.lima@hospital.com",
-      telefone: "+244 923456781",
+      telefone: "+244 923456789",
     },
   ];
 
@@ -156,7 +156,7 @@ export default function ProfissionaisHospital() {
 
               <div>
                 <p className="text-sm text-slate-500">Telefone</p>
-                <p className="font-semibold text-slate-800">(11) 99999-0001</p>
+                <p className="font-semibold text-slate-800">+244 923456789</p>
               </div>
 
               <div>
