@@ -47,10 +47,30 @@ export default function DashboardFarmacia() {
               <i className="fas fa-file-prescription text-teal-500 text-2xl"></i>
             </div>
           </div>
+
+          <div className="bg-white p-6 rounded-xl shadow-sm border-l-4 border-teal-500">
+            <div className="flex justify-between items-center">
+              <div>
+                <p className="text-sm text-slate-500">Produtos em Estoque</p>
+                <h3 className="text-2xl font-bold text-slate-800">85</h3>
+              </div>
+              <i className="fas fa-boxes text-teal-500 text-2xl"></i>
+            </div>
+          </div>
+
+          <div className="bg-white p-6 rounded-xl shadow-sm border-l-4 border-teal-500">
+            <div className="flex justify-between items-center">
+              <div>
+                <p className="text-sm text-slate-500">Pedidos Online</p>
+                <h3 className="text-2xl font-bold text-slate-800">7</h3>
+              </div>
+              <i className="fas fa-shopping-cart text-teal-500 text-2xl"></i>
+            </div>
+          </div>
         </div>
 
         {/* AÇÕES PRINCIPAIS */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">
           {/* PEDIDOS DE PRESCRIÇÃO */}
           <div className="bg-white p-6 rounded-xl shadow-sm">
             <h2 className="text-lg font-bold text-teal-800 mb-4">
@@ -83,7 +103,7 @@ export default function DashboardFarmacia() {
             </Link>
           </div>
 
-          {/* SOLICITAÇÕES */}
+          {/* SOLICITAÇÕES DE CONSULTA */}
           <div className="bg-white p-6 rounded-xl shadow-sm">
             <h2 className="text-lg font-bold text-teal-800 mb-4">
               Solicitações de Consulta
@@ -108,6 +128,38 @@ export default function DashboardFarmacia() {
               </li>
             </ul>
           </div>
+        </div>
+
+        {/* PRODUTOS COM ESTOQUE BAIXO */}
+        <div className="bg-white p-6 rounded-xl shadow-sm mt-6">
+          <h2 className="text-lg font-bold text-teal-800 mb-4">
+            Produtos com Estoque Baixo
+          </h2>
+          <ul className="divide-y divide-slate-200">
+            <li className="py-3 flex justify-between">
+              <div>
+                <p className="font-medium text-slate-800">Paracetamol 500mg</p>
+                <p className="text-sm text-slate-500">Estoque: 3 unidades</p>
+              </div>
+              <span className="text-sm text-red-500 font-semibold">Repor</span>
+            </li>
+
+            <li className="py-3 flex justify-between">
+              <div>
+                <p className="font-medium text-slate-800">Ibuprofeno 200mg</p>
+                <p className="text-sm text-slate-500">Estoque: 5 unidades</p>
+              </div>
+              <span className="text-sm text-red-500 font-semibold">Repor</span>
+            </li>
+
+            <li className="py-3 flex justify-between">
+              <div>
+                <p className="font-medium text-slate-800">Amoxicilina 250mg</p>
+                <p className="text-sm text-slate-500">Estoque: 2 unidades</p>
+              </div>
+              <span className="text-sm text-red-500 font-semibold">Repor</span>
+            </li>
+          </ul>
         </div>
       </FarmaciaLayout>
     </>
