@@ -14,7 +14,7 @@ import EspecialistaImg8 from "../../assets/img/especialista8.jpg";
 export default function Especialistas() {
   return (
     <>
-      <title>Especialistas | Sisa Free</title>
+      <title>Especialistas | SISA</title>
 
       {/* Header */}
       <Header />
@@ -62,7 +62,7 @@ export default function Especialistas() {
               </h3>
               <p className="text-slate-500 mb-4">Clínico Geral</p>
               <Link
-                to="/agendar"
+                to="/auth/login"
                 className="inline-block px-6 py-2 bg-teal-500 text-white rounded-lg hover:bg-teal-600 transition"
               >
                 Agendar Consulta
@@ -90,7 +90,7 @@ export default function Especialistas() {
               </h3>
               <p className="text-slate-500 mb-4">Pediatra</p>
               <Link
-                to="/agendar"
+                to="/auth/login"
                 className="inline-block px-6 py-2 bg-teal-500 text-white rounded-lg hover:bg-teal-600 transition"
               >
                 Agendar Consulta
@@ -118,7 +118,7 @@ export default function Especialistas() {
               </h3>
               <p className="text-slate-500 mb-4">Cardiologista</p>
               <Link
-                to="/agendar"
+                to="/auth/login"
                 className="inline-block px-6 py-2 bg-teal-500 text-white rounded-lg hover:bg-teal-600 transition"
               >
                 Agendar Consulta
@@ -146,7 +146,7 @@ export default function Especialistas() {
               </h3>
               <p className="text-slate-500 mb-4">Ginecologista</p>
               <Link
-                to="/agendar"
+                to="/auth/login"
                 className="inline-block px-6 py-2 bg-teal-500 text-white rounded-lg hover:bg-teal-600 transition"
               >
                 Agendar Consulta
@@ -174,7 +174,7 @@ export default function Especialistas() {
               </h3>
               <p className="text-slate-500 mb-4">Ortopedista</p>
               <Link
-                to="/agendar"
+                to="/auth/login"
                 className="inline-block px-6 py-2 bg-teal-500 text-white rounded-lg hover:bg-teal-600 transition"
               >
                 Agendar Consulta
@@ -202,7 +202,7 @@ export default function Especialistas() {
               </h3>
               <p className="text-slate-500 mb-4">Neurologista</p>
               <Link
-                to="/agendar"
+                to="/auth/login"
                 className="inline-block px-6 py-2 bg-teal-500 text-white rounded-lg hover:bg-teal-600 transition"
               >
                 Agendar Consulta
@@ -230,7 +230,7 @@ export default function Especialistas() {
               </h3>
               <p className="text-slate-500 mb-4">Clínico Geral</p>
               <Link
-                to="/agendar"
+                to="/auth/login"
                 className="inline-block px-6 py-2 bg-teal-500 text-white rounded-lg hover:bg-teal-600 transition"
               >
                 Agendar Consulta

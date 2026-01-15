@@ -10,7 +10,7 @@ import FarmaciaImg4 from "../../assets/img/farmacia4.jpg";
 export default function Farmacias() {
   return (
     <>
-      <title>Farmácias | Sisa Free</title>
+      <title>Farmácias | SISA</title>
 
       {/* Header */}
       <Header />
@@ -139,7 +139,7 @@ export default function Farmacias() {
             <div className="relative">
               <img
                 src={FarmaciaImg2}
-                alt="Drogaria Siza"
+                alt="Drogaria SISA"
                 className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105"
               />
               <div className="absolute inset-0 flex flex-col items-center justify-center bg-teal-700/20 opacity-100 sm:opacity-0 group-hover:opacity-100 transition">
@@ -149,7 +149,7 @@ export default function Farmacias() {
               </div>
             </div>
             <div className="p-6 text-center">
-              <h3 className="text-xl font-bold text-teal-800">Drogaria Sisa</h3>
+              <h3 className="text-xl font-bold text-teal-800">Drogaria SISA</h3>
               <p className="text-slate-500 mb-4">Benguela</p>
               <Link
                 to="/farmacia/2"
