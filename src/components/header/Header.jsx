@@ -10,7 +10,7 @@ export default function Header() {
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2 text-2xl font-bold">
           <i className="fa-solid fa-heart-pulse text-teal-500"></i>
-          <span className="text-teal-800">Sisa</span>
+          <span className="text-teal-800">SISA</span>
         </Link>
 
         {/* Botão mobile */}

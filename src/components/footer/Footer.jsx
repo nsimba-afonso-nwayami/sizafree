@@ -8,7 +8,7 @@ export default function Footer() {
         <div>
           <h3 className="text-2xl font-bold mb-4 flex items-center gap-2 drop-shadow-md">
             <i className="fa-solid fa-heart-pulse text-white"></i>
-            Sisa
+            SISA
           </h3>
           <p className="text-teal-100 drop-shadow-sm">
             Conectando pacientes, médicos, farmácias e centros médicos através
