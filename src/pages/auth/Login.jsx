@@ -1,27 +1,8 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useState } from "react";
 
 export default function Login() {
   const [showPassword, setShowPassword] = useState(false);
-  const [formData, setFormData] = useState({ email: "", senha: "" });
-  const navigate = useNavigate();
-
-  function handleChange(e) {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  }
-
-  function handleSubmit(e) {
-    e.preventDefault();
-
-    if (!formData.email || !formData.senha) {
-      alert("Por favor, preencha todos os campos.");
-      return;
-    }
-
-    // Simulação de login bem-sucedido
-    navigate("/dashboard/paciente");
-  }
 
   return (
     <>
@@ -29,6 +10,7 @@ export default function Login() {
 
       <section className="min-h-screen flex items-center justify-center bg-slate-50 px-6 py-12">
         <div className="w-full max-w-md bg-white rounded-2xl p-8 shadow-lg border border-slate-200">
+          {/* Logo */}
           <div className="flex justify-center mb-6">
             <div className="w-16 h-16 flex items-center justify-center bg-teal-500 text-white rounded-full text-3xl shadow-lg">
               <i className="fa-solid fa-heart-pulse"></i>
@@ -39,7 +21,8 @@ export default function Login() {
             Sisa Free Login
           </h2>
 
-          <form className="space-y-4" onSubmit={handleSubmit}>
+          <form className="space-y-4">
+            {/* Email */}
             <div className="relative">
               <label className="block mb-2 text-slate-700 font-semibold">
                 Email
@@ -49,14 +32,12 @@ export default function Login() {
               </span>
               <input
                 type="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
                 placeholder="Digite seu email"
                 className="w-full pl-10 p-3 rounded-lg bg-slate-100 text-slate-900 focus:outline-none border border-slate-300 focus:border-teal-500 transition"
               />
             </div>
 
+            {/* Senha */}
             <div className="relative">
               <label className="block mb-2 text-slate-700 font-semibold">
                 Senha
@@ -66,12 +47,10 @@ export default function Login() {
               </span>
               <input
                 type={showPassword ? "text" : "password"}
-                name="senha"
-                value={formData.senha}
-                onChange={handleChange}
                 placeholder="Digite sua senha"
                 className="w-full pl-10 pr-10 p-3 rounded-lg bg-slate-100 text-slate-900 focus:outline-none border border-slate-300 focus:border-teal-500 transition"
               />
+              {/* Ícone de olho */}
               <span
                 className="absolute right-3 top-10.5 text-slate-400 cursor-pointer"
                 onClick={() => setShowPassword(!showPassword)}
@@ -84,6 +63,7 @@ export default function Login() {
               </span>
             </div>
 
+            {/* Botão Entrar */}
             <button
               type="submit"
               className="w-full py-3 mt-2 rounded-xl font-bold bg-teal-500 hover:bg-teal-600 transition cursor-pointer text-white flex items-center justify-center gap-2"
@@ -91,6 +71,7 @@ export default function Login() {
               Entrar
             </button>
 
+            {/* Esqueceu senha */}
             <div className="text-right mt-2">
               <Link
                 to="/auth/esqueceu-senha"
@@ -101,6 +82,7 @@ export default function Login() {
             </div>
           </form>
 
+          {/* Link para cadastro */}
           <p className="mt-4 text-center text-sm text-slate-600">
             Não tem conta?{" "}
             <Link

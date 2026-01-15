@@ -1,68 +1,13 @@
-import { Link, useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function CadastrarEspecialista() {
-  const navigate = useNavigate();
-
-  const [formData, setFormData] = useState({
-    nome: "",
-    telefone: "",
-    email: "",
-    especialidade: "",
-    registro: "",
-    experiencia: "",
-    atendimento: "",
-    hospital: "",
-    provincia: "",
-    foto: null,
-    docProfissional: null,
-    docIdentificacao: null,
-  });
-
-  function handleChange(e) {
-    const { name, value, files } = e.target;
-
-    setFormData({
-      ...formData,
-      [name]: files ? files[0] : value,
-    });
-  }
-
-  function handleSubmit(e) {
-    e.preventDefault();
-
-    const camposObrigatorios = [
-      "nome",
-      "telefone",
-      "email",
-      "especialidade",
-      "registro",
-      "experiencia",
-      "atendimento",
-      "hospital",
-      "provincia",
-      "foto",
-      "docProfissional",
-      "docIdentificacao",
-    ];
-
-    const algumVazio = camposObrigatorios.some((campo) => !formData[campo]);
-
-    if (algumVazio) {
-      alert("Por favor, preencha todos os campos obrigatórios.");
-      return;
-    }
-
-    // Simulação de sucesso
-    navigate("/dashboard/especialista");
-  }
-
   return (
     <>
       <title>Cadastrar Especialista | Sisa Free</title>
 
       <section className="min-h-screen flex items-center justify-center bg-slate-50 px-6 py-12">
         <div className="w-full max-w-3xl bg-white rounded-2xl p-8 shadow-lg border border-slate-200">
+          {/* Logo */}
           <div className="flex justify-center mb-6">
             <div className="w-16 h-16 flex items-center justify-center bg-teal-500 text-white rounded-full text-3xl shadow-lg">
               <i className="fa-solid fa-user-doctor"></i>
@@ -77,140 +22,234 @@ export default function CadastrarEspecialista() {
             Complete as informações profissionais para validação no Sisa Free.
           </p>
 
-          <form className="space-y-6" onSubmit={handleSubmit}>
+          <form className="space-y-6">
+            {/* DADOS BÁSICOS */}
             <div className="grid md:grid-cols-2 gap-4">
+              {/* Nome */}
               <div>
                 <label className="block mb-2 font-semibold text-slate-700">
                   Nome Completo
                 </label>
                 <input
                   type="text"
-                  name="nome"
-                  onChange={handleChange}
-                  className="w-full p-3 rounded-lg bg-slate-100 border border-slate-300"
+                  placeholder="Digite o nome completo"
+                  className="w-full p-3 rounded-lg bg-slate-100 border border-slate-300 focus:outline-none focus:border-teal-500 transition"
                 />
               </div>
 
+              {/* Telefone */}
               <div>
                 <label className="block mb-2 font-semibold text-slate-700">
                   Telefone
                 </label>
                 <input
                   type="tel"
-                  name="telefone"
-                  onChange={handleChange}
-                  className="w-full p-3 rounded-lg bg-slate-100 border border-slate-300"
+                  placeholder="Ex: 9XX XXX XXX"
+                  className="w-full p-3 rounded-lg bg-slate-100 border border-slate-300 focus:outline-none focus:border-teal-500 transition"
                 />
               </div>
             </div>
 
+            {/* Email */}
             <div>
               <label className="block mb-2 font-semibold text-slate-700">
                 Email
               </label>
               <input
                 type="email"
-                name="email"
-                onChange={handleChange}
-                className="w-full p-3 rounded-lg bg-slate-100 border border-slate-300"
+                placeholder="Digite o email"
+                className="w-full p-3 rounded-lg bg-slate-100 border border-slate-300 focus:outline-none focus:border-teal-500 transition"
               />
             </div>
 
+            {/* Foto de perfil */}
             <div>
               <label className="block mb-2 font-semibold text-slate-700">
                 Foto de Perfil
               </label>
               <input
                 type="file"
-                name="foto"
                 accept="image/*"
-                onChange={handleChange}
-                className="w-full p-3 rounded-lg bg-slate-100 border border-slate-300"
+                className="w-full p-3 rounded-lg bg-slate-100 border border-slate-300 focus:outline-none focus:border-teal-500 transition"
               />
             </div>
 
+            {/* Especialidade */}
             <div>
               <label className="block mb-2 font-semibold text-slate-700">
                 Especialidade
               </label>
-              <select
-                name="especialidade"
-                onChange={handleChange}
-                className="w-full p-3 rounded-lg bg-slate-100 border border-slate-300"
-              >
-                <option value="">Selecione</option>
-                <option>Clínico Geral</option>
-                <option>Cardiologia</option>
-                <option>Pediatria</option>
+              <select className="w-full p-3 rounded-lg bg-slate-100 border border-slate-300 focus:outline-none focus:border-teal-500 transition">
+                <option value="">Selecione a especialidade</option>
+
+                <optgroup label="Clínicas Gerais">
+                  <option>Clínico Geral</option>
+                  <option>Medicina Interna</option>
+                  <option>Medicina Familiar</option>
+                </optgroup>
+
+                <optgroup label="Especialidades Médicas">
+                  <option>Cardiologia</option>
+                  <option>Dermatologia</option>
+                  <option>Endocrinologia</option>
+                  <option>Gastroenterologia</option>
+                  <option>Geriatria</option>
+                  <option>Hematologia</option>
+                  <option>Infectologia</option>
+                  <option>Nefrologia</option>
+                  <option>Neurologia</option>
+                  <option>Oncologia</option>
+                  <option>Pneumologia</option>
+                  <option>Reumatologia</option>
+                </optgroup>
+
+                <optgroup label="Cirúrgicas">
+                  <option>Cirurgia Geral</option>
+                  <option>Cirurgia Plástica</option>
+                  <option>Cirurgia Cardiovascular</option>
+                  <option>Cirurgia Pediátrica</option>
+                  <option>Neurocirurgia</option>
+                  <option>Ortopedia e Traumatologia</option>
+                  <option>Urologia</option>
+                </optgroup>
+
+                <optgroup label="Mulher e Criança">
+                  <option>Ginecologia</option>
+                  <option>Obstetrícia</option>
+                  <option>Pediatria</option>
+                  <option>Neonatologia</option>
+                </optgroup>
+
+                <optgroup label="Diagnóstico e Apoio">
+                  <option>Anestesiologia</option>
+                  <option>Radiologia</option>
+                  <option>Patologia Clínica</option>
+                </optgroup>
+
+                <optgroup label="Saúde Mental">
+                  <option>Psiquiatria</option>
+                </optgroup>
+
+                <optgroup label="Outras Áreas da Saúde">
+                  <option>Enfermagem</option>
+                  <option>Farmácia</option>
+                  <option>Medicina do Trabalho</option>
+                  <option>Medicina Desportiva</option>
+                  <option>Medicina Legal</option>
+                  <option>Saúde Pública</option>
+                </optgroup>
               </select>
             </div>
 
+            {/* Registro e Experiência */}
             <div className="grid md:grid-cols-2 gap-4">
-              <input
-                type="text"
-                name="registro"
-                placeholder="Registro"
-                onChange={handleChange}
-                className="w-full p-3 rounded-lg bg-slate-100 border border-slate-300"
-              />
+              <div>
+                <label className="block mb-2 font-semibold text-slate-700">
+                  Nº da Ordem / Registro Profissional
+                </label>
+                <input
+                  type="text"
+                  placeholder="Ex: CRM-123456"
+                  className="w-full p-3 rounded-lg bg-slate-100 border border-slate-300 focus:outline-none focus:border-teal-500 transition"
+                />
+              </div>
 
-              <input
-                type="number"
-                name="experiencia"
-                placeholder="Anos de experiência"
-                onChange={handleChange}
-                className="w-full p-3 rounded-lg bg-slate-100 border border-slate-300"
-              />
+              <div>
+                <label className="block mb-2 font-semibold text-slate-700">
+                  Anos de Experiência
+                </label>
+                <input
+                  type="number"
+                  placeholder="Ex: 5"
+                  className="w-full p-3 rounded-lg bg-slate-100 border border-slate-300 focus:outline-none focus:border-teal-500 transition"
+                />
+              </div>
             </div>
 
+            {/* Tipo de atendimento */}
             <div className="grid md:grid-cols-2 gap-4">
-              <select
-                name="atendimento"
-                onChange={handleChange}
-                className="w-full p-3 rounded-lg bg-slate-100 border border-slate-300"
-              >
-                <option value="">Tipo de atendimento</option>
-                <option>Presencial</option>
-                <option>Online</option>
+              <div>
+                <label className="block mb-2 font-semibold text-slate-700">
+                  Tipo de Atendimento
+                </label>
+                <select className="w-full p-3 rounded-lg bg-slate-100 border border-slate-300 focus:outline-none focus:border-teal-500 transition">
+                  <option value="">Selecione</option>
+                  <option>Presencial</option>
+                  <option>Online</option>
+                  <option>Presencial e Online</option>
+                </select>
+              </div>
+
+              <div>
+                <label className="block mb-2 font-semibold text-slate-700">
+                  Hospital / Clínica
+                </label>
+                <input
+                  type="text"
+                  placeholder="Nome da instituição"
+                  className="w-full p-3 rounded-lg bg-slate-100 border border-slate-300 focus:outline-none focus:border-teal-500 transition"
+                />
+              </div>
+            </div>
+
+            {/* Província */}
+            <div>
+              <label className="block mb-2 font-semibold text-slate-700">
+                Província
+              </label>
+              <select className="w-full p-3 rounded-lg bg-slate-100 border border-slate-300 focus:outline-none focus:border-teal-500 transition">
+                <option value="">Selecione a província</option>
+                <option>Bengo</option>
+                <option>Benguela</option>
+                <option>Bié</option>
+                <option>Cabinda</option>
+                <option>Cuando</option>
+                <option>Cubango</option>
+                <option>Cuanza Norte</option>
+                <option>Cuanza Sul</option>
+                <option>Cunene</option>
+                <option>Huambo</option>
+                <option>Huíla</option>
+                <option>Icolo e Bengo</option>
+                <option>Luanda</option>
+                <option>Lunda Norte</option>
+                <option>Lunda Sul</option>
+                <option>Malanje</option>
+                <option>Moxico</option>
+                <option>Moxico Leste</option>
+                <option>Namibe</option>
+                <option>Uíge</option>
+                <option>Zaire</option>
               </select>
-
-              <input
-                type="text"
-                name="hospital"
-                placeholder="Hospital / Clínica"
-                onChange={handleChange}
-                className="w-full p-3 rounded-lg bg-slate-100 border border-slate-300"
-              />
             </div>
 
-            <select
-              name="provincia"
-              onChange={handleChange}
-              className="w-full p-3 rounded-lg bg-slate-100 border border-slate-300"
-            >
-              <option value="">Selecione a província</option>
-              <option>Luanda</option>
-              <option>Benguela</option>
-            </select>
-
+            {/* Documentos */}
             <div className="grid md:grid-cols-2 gap-4">
-              <input
-                type="file"
-                name="docProfissional"
-                onChange={handleChange}
-                className="w-full p-3 rounded-lg bg-slate-100 border border-slate-300"
-              />
-              <input
-                type="file"
-                name="docIdentificacao"
-                onChange={handleChange}
-                className="w-full p-3 rounded-lg bg-slate-100 border border-slate-300"
-              />
+              <div>
+                <label className="block mb-2 font-semibold text-slate-700">
+                  Documento Profissional
+                </label>
+                <input
+                  type="file"
+                  className="w-full p-3 rounded-lg bg-slate-100 border border-slate-300 focus:outline-none focus:border-teal-500 transition"
+                />
+              </div>
+
+              <div>
+                <label className="block mb-2 font-semibold text-slate-700">
+                  Documento de Identificação
+                </label>
+                <input
+                  type="file"
+                  className="w-full p-3 rounded-lg bg-slate-100 border border-slate-300 focus:outline-none focus:border-teal-500 transition"
+                />
+              </div>
             </div>
 
+            {/* Botão */}
             <button
               type="submit"
-              className="w-full py-3 mt-4 rounded-xl font-bold bg-teal-500 hover:bg-teal-600 text-white"
+              className="w-full cursor-pointer py-3 mt-4 rounded-xl font-bold bg-teal-500 hover:bg-teal-600 transition text-white"
             >
               Enviar para Verificação
             </button>
