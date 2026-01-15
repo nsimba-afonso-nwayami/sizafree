@@ -126,7 +126,7 @@ export default function EstoqueFarmacia() {
           title="Detalhes do Estoque"
           icon="fas fa-boxes-stacked"
         >
-          <div className="space-y-6">
+          <div className="max-w-3xl mx-auto space-y-6">
             <div className="bg-teal-50 border border-teal-200 rounded-xl p-6">
               <h2 className="text-xl font-bold text-slate-800">
                 Amoxicilina 500mg
