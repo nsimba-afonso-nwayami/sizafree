@@ -8,7 +8,7 @@ import TeleMedicinaVideo from "../../assets/video/telemedicina.mp4";
 export default function Home() {
   return (
     <>
-      <title>Sisa Free</title>
+      <title>SISA</title>
       {/* Header */}
       <Header />
 

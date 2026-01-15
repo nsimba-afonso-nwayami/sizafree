@@ -4,7 +4,7 @@ import Footer from "../../components/footer/Footer";
 export default function Agendar() {
   return (
     <>
-      <title>Agendar | Sisa Free</title>
+      <title>Agendar | SISA</title>
 
       {/* Header */}
       <Header />
