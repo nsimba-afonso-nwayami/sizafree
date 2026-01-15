@@ -38,45 +38,6 @@ export default function Especialistas() {
         </div>
       </section>
 
-      {/* Pesquisa e Filtro */}
-      <section className="py-12 px-6 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <div className="bg-slate-50 border border-slate-200 rounded-xl p-6 grid md:grid-cols-3 gap-6">
-            <div>
-              <label className="block text-sm font-medium text-slate-700 mb-2">
-                Pesquisar especialista
-              </label>
-              <input
-                type="text"
-                placeholder="Digite o nome do médico"
-                className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-teal-500 focus:outline-none"
-              />
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium text-slate-700 mb-2">
-                Especialidade
-              </label>
-              <select className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-teal-500 focus:outline-none">
-                <option>Selecione a especialidade</option>
-                <option>Clínica Geral</option>
-                <option>Pediatria</option>
-                <option>Cardiologia</option>
-                <option>Ginecologia</option>
-                <option>Ortopedia</option>
-                <option>Neurologia</option>
-              </select>
-            </div>
-
-            <div className="flex items-end">
-              <button className="w-full bg-teal-500 hover:bg-teal-600 text-white font-semibold py-3 rounded-lg transition cursor-pointer">
-                Buscar Especialista
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Especialistas */}
       <section className="py-24 px-6 bg-slate-50">
         <div className="max-w-7xl mx-auto grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
