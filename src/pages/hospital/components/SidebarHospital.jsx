@@ -31,7 +31,7 @@ export default function SidebarHospital({ sidebarOpen, setSidebarOpen }) {
         {/* Cabeçalho */}
         <div className="flex-1">
           <h1 className="text-2xl font-bold mb-1 tracking-wide mt-6 md:mt-0 text-white">
-            <span className="text-teal-200">Sisa</span> Free
+            <Link to="/" className="text-teal-200">Sisa</Link>
           </h1>
           <p className="text-sm text-teal-200 mb-8 truncate">
             Painel do Hospital
