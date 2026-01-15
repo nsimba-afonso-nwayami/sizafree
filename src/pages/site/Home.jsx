@@ -11,6 +11,7 @@ export default function Home() {
       <title>Sisa Free</title>
       {/* Header */}
       <Header />
+
       {/* Hero Section */}
       <section
         className="relative h-screen flex items-center justify-center bg-cover bg-center"
@@ -48,6 +49,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+
       {/* Cards de Destaque */}
       <section className="py-16 bg-slate-50">
         <div className="max-w-7xl mx-auto px-6 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -100,85 +102,94 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/* Formulário: Verificar Disponibilidade */}
-      <section className="py-16 bg-slate-50">
-        <div className="max-w-4xl mx-auto px-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-teal-800 mb-4 text-center">
-            Verifique a disponibilidade para sua consulta
-          </h2>
-          <p className="text-slate-500 mb-10 text-center">
-            Preencha o formulário abaixo e nosso sistema mostrará as opções
-            disponíveis com base na especialidade, hospital e data desejada.
-          </p>
 
-          <form className="bg-white p-8 rounded-xl shadow-md grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* Data da Consulta */}
-            <div className="flex flex-col">
-              <label htmlFor="data" className="mb-2 font-medium text-slate-800">
-                Data da Consulta
-              </label>
-              <input
-                type="date"
-                id="data"
-                className="border border-slate-500 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-teal-500"
-                required
-              />
+      {/* Como o Sisa Free funciona */}
+      <section className="py-20 bg-slate-50">
+        <div className="max-w-7xl mx-auto px-6">
+          {/* Título */}
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-teal-800 mb-4">
+              Como o SISA Free funciona na prática
+            </h2>
+            <p className="text-slate-500 text-lg">
+              Do agendamento da consulta à prescrição e farmácia, tudo acontece
+              dentro de um único sistema digital, seguro e integrado.
+            </p>
+          </div>
+
+          {/* Passos */}
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            {/* Passo 1 */}
+            <div className="bg-white rounded-xl p-6 shadow hover:shadow-lg transition text-center">
+              <div className="w-14 h-14 mx-auto mb-4 flex items-center justify-center rounded-full bg-teal-100">
+                <i className="fa-solid fa-user-plus text-teal-600 text-xl"></i>
+              </div>
+              <h3 className="font-semibold text-lg text-teal-800 mb-2">
+                Crie sua conta
+              </h3>
+              <p className="text-slate-600 text-sm">
+                Cadastre-se como paciente, médico, farmácia ou centro de saúde
+                de forma simples e rápida.
+              </p>
             </div>
 
-            {/* Especialidade */}
-            <div className="flex flex-col">
-              <label
-                htmlFor="especialidade"
-                className="mb-2 font-medium text-slate-800"
-              >
-                Especialidade
-              </label>
-              <select
-                id="especialidade"
-                className="border border-slate-500 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-teal-500"
-                required
-              >
-                <option>Clínico Geral</option>
-                <option>Pediatria</option>
-                <option>Cardiologia</option>
-                <option>Ginecologia</option>
-                <option>Ortopedia</option>
-              </select>
+            {/* Passo 2 */}
+            <div className="bg-white rounded-xl p-6 shadow hover:shadow-lg transition text-center">
+              <div className="w-14 h-14 mx-auto mb-4 flex items-center justify-center rounded-full bg-cyan-100">
+                <i className="fa-solid fa-calendar-check text-cyan-600 text-xl"></i>
+              </div>
+              <h3 className="font-semibold text-lg text-teal-800 mb-2">
+                Agende ou atenda consultas
+              </h3>
+              <p className="text-slate-600 text-sm">
+                Gerencie consultas presenciais ou realize atendimentos por
+                telemedicina, tudo pela plataforma.
+              </p>
             </div>
 
-            {/* Hospital */}
-            <div className="flex flex-col">
-              <label
-                htmlFor="hospital"
-                className="mb-2 font-medium text-slate-800"
-              >
-                Hospital
-              </label>
-              <select
-                id="hospital"
-                className="border border-slate-500 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-teal-500"
-                required
-              >
-                <option>Hospital Militar Principal de Luanda</option>
-                <option>Hospital Josina Machel</option>
-                <option>Hospital Geral de Luanda</option>
-                <option>Hospital David Bernardino</option>
-                <option>Hospital Pediátrico Dr. David Bernardino</option>
-              </select>
+            {/* Passo 3 */}
+            <div className="bg-white rounded-xl p-6 shadow hover:shadow-lg transition text-center">
+              <div className="w-14 h-14 mx-auto mb-4 flex items-center justify-center rounded-full bg-lime-100">
+                <i className="fa-solid fa-file-prescription text-lime-600 text-xl"></i>
+              </div>
+              <h3 className="font-semibold text-lg text-teal-800 mb-2">
+                Prescrições e histórico
+              </h3>
+              <p className="text-slate-600 text-sm">
+                Tenha acesso a prescrições digitais e a todo o histórico clínico
+                de forma segura e organizada.
+              </p>
             </div>
 
-            {/* Botão enviar */}
-            <div className="md:col-span-2 flex justify-center">
-              <button
-                type="submit"
-                className="bg-teal-500 hover:bg-teal-600 text-white font-semibold px-8 py-3 rounded-lg transition w-full cursor-pointer"
-              >
-                Verificar Disponibilidade
-              </button>
+            {/* Passo 4 */}
+            <div className="bg-white rounded-xl p-6 shadow hover:shadow-lg transition text-center">
+              <div className="w-14 h-14 mx-auto mb-4 flex items-center justify-center rounded-full bg-orange-100">
+                <i className="fa-solid fa-pills text-orange-600 text-xl"></i>
+              </div>
+              <h3 className="font-semibold text-lg text-teal-800 mb-2">
+                Farmácias conectadas
+              </h3>
+              <p className="text-slate-600 text-sm">
+                As farmácias recebem prescrições digitais e gerenciam
+                medicamentos, facilitando o acesso do paciente ao tratamento.
+              </p>
             </div>
-          </form>
+          </div>
+
+          {/* CTA */}
+          <div className="mt-16 flex justify-center">
+            <a
+              href="/auth/cadastrar"
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-lg
+                   bg-teal-500 text-white font-semibold
+                   hover:bg-teal-600 transition cursor-pointer"
+            >
+              Começar agora
+            </a>
+          </div>
         </div>
       </section>
+
       {/* vantagens */}
       <section className="py-16 bg-slate-50">
         <div className="max-w-7xl mx-auto px-6">
@@ -213,7 +224,7 @@ export default function Home() {
               </h3>
               <p className="text-slate-800">
                 Agendamento digital simples e autónomo através da plataforma
-                Sisa Free.
+                SISA.
               </p>
             </div>
 
@@ -258,7 +269,7 @@ export default function Home() {
                 Ligação Direta
               </h3>
               <p className="text-slate-800">
-                Ligação direta com os serviços disponíveis no sistema Sisa Free.
+                Ligação direta com os serviços disponíveis no sistema SISA.
               </p>
             </div>
 
@@ -319,8 +330,8 @@ export default function Home() {
               Fazendo por Angola
             </h2>
             <p className="text-slate-800 mb-4">
-              O sistema Sisa Free é desenvolvido em Angola, com foco em
-              soluções que fortalecem o acesso à saúde da população. Conectamos
+              O sistema SISA é desenvolvido em Angola, com foco em soluções
+              que fortalecem o acesso à saúde da população. Conectamos
               pacientes, médicos, farmácias e centros médicos de forma eficiente
               e digital.
             </p>
@@ -570,7 +581,7 @@ export default function Home() {
       <section className="py-16 bg-linear-to-r from-teal-500 to-teal-800">
         <div className="max-w-4xl mx-auto px-6 text-center flex flex-col items-center gap-4">
           <h2 className="text-4xl md:text-5xl font-bold text-white">
-            Comece sua experiência com o Sisa Free
+            Comece sua experiência com o SISA
           </h2>
           <p className="text-teal-100 text-lg md:text-xl">
             Cadastre-se agora e tenha acesso a consultas, telemedicina e todo o
