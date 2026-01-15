@@ -98,7 +98,7 @@ export default function Footer() {
             href="mailto:contato@sizafree.com"
             className="text-teal-100 hover:text-white transition drop-shadow-sm"
           >
-            Email: contato@sisafree.com
+            Email: contato@sisa.com
           </a>
           <a
             href="tel:+244923000000"
@@ -145,7 +145,7 @@ export default function Footer() {
 
       {/* Copyright com borda mais visível */}
       <div className="mt-12 border-t-2 border-teal-300/80 pt-6 text-center text-teal-200 text-sm drop-shadow-sm">
-        &copy; {new Date().getFullYear()} Sisa Free. Todos os direitos reservados.
+        &copy; {new Date().getFullYear()} SISA. Todos os direitos reservados.
       </div>
     </footer>
   );

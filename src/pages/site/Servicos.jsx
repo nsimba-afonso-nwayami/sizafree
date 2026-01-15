@@ -5,7 +5,7 @@ import Footer from "../../components/footer/Footer";
 export default function Servicos() {
   return (
     <>
-      <title>Serviços | Sisa Free</title>
+      <title>Serviços | SISA</title>
 
       {/* Header */}
       <Header />
@@ -22,7 +22,7 @@ export default function Servicos() {
           </h1>
 
           <p className="text-lg text-slate-600 mb-8">
-            O Sisa Free oferece um ecossistema completo de serviços de saúde
+            O SISA oferece um ecossistema completo de serviços de saúde
             digital, conectando pacientes, médicos, farmácias e unidades de
             saúde em um só lugar, com praticidade, segurança e inovação.
           </p>
@@ -54,7 +54,7 @@ export default function Servicos() {
           </h1>
           {/* Parágrafo explicativo */}
           <p className="text-center text-slate-600 mb-16 max-w-3xl mx-auto">
-            Explore a variedade de serviços oferecidos pelo Sisa Free,
+            Explore a variedade de serviços oferecidos pelo SISA,
             conectando pacientes, médicos, farmácias e unidades de saúde em
             Angola de forma digital, prática e segura.
           </p>
@@ -188,7 +188,7 @@ export default function Servicos() {
                 </h3>
                 <p className="text-slate-600 mb-6 text-center flex-1">
                   Localize facilmente hospitais e centros médicos integrados ao
-                  ecossistema Siza Free.
+                  ecossistema SISA.
                 </p>
                 <Link
                   to="/unidades"
@@ -210,7 +210,7 @@ export default function Servicos() {
             Como Funciona
           </h2>
           <p className="text-center text-slate-600 mb-16 max-w-3xl mx-auto">
-            Entenda o passo a passo de como utilizar os serviços do Siza Free de
+            Entenda o passo a passo de como utilizar os serviços do SISA de
             forma simples, segura e digital.
           </p>
 
@@ -229,7 +229,7 @@ export default function Servicos() {
               </h3>
               <p className="text-slate-600 text-center">
                 Crie sua conta de forma rápida e segura para acessar todos os
-                serviços Sisa Free.
+                serviços SISA.
               </p>
             </div>
 
