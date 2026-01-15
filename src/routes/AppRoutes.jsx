@@ -149,7 +149,7 @@ export default function AppRoutes () {
                 <Route path="estoque" element={<EstoqueFarmacia />} />
                 <Route path="vendas" element={<VendasFarmacia />} />
                 <Route path="pedidos-online" element={<PedidosFarmacia />} />
-                <Route path="relatorios" element={<RelatoriosFarmacia />} />
+                <Route path="relatorios-loja" element={<RelatoriosFarmacia />} />
                 <Route path="configuracoes" element={<ConfiguracoesFarmacia />} />
                 <Route path="notificacoes" element={<NotificacoesFarmacia />} />
                 <Route path="*" element={<NotFoundFarmacia />} />
