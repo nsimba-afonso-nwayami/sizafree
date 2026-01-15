@@ -6,7 +6,7 @@ import SobreImg from "../../assets/img/sobre.jpg";
 export default function Sobre() {
   return (
     <>
-      <title>Sobre | Sisa Free</title>
+      <title>Sobre | SISA</title>
 
       {/* Header */}
       <Header />
@@ -23,7 +23,7 @@ export default function Sobre() {
           </h1>
 
           <p className="text-lg text-slate-600 mb-6">
-            O <strong>Sisa Free</strong> é uma plataforma de saúde digital
+            O <strong>SISA</strong> é uma plataforma de saúde digital
             criada para conectar pacientes, médicos, farmácias e unidades de
             saúde em um único ecossistema seguro, acessível e eficiente.
           </p>
@@ -50,7 +50,7 @@ export default function Sobre() {
             </h2>
 
             <p className="text-slate-600 mb-4">
-              O <strong>Sisa Free</strong> nasce da necessidade de aproximar
+              O <strong>SISA</strong> nasce da necessidade de aproximar
               pessoas dos serviços de saúde, utilizando tecnologia para
               simplificar processos, reduzir filas e melhorar a experiência do
               paciente.
@@ -124,7 +124,7 @@ export default function Sobre() {
           </h2>
           <p className="text-slate-600 max-w-3xl mx-auto">
             Nosso trabalho é guiado por princípios claros que orientam cada
-            decisão e cada funcionalidade do Sisa Free.
+            decisão e cada funcionalidade do SISA.
           </p>
         </div>
 
