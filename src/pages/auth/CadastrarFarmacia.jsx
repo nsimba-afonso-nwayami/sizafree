@@ -1,13 +1,67 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 export default function CadastrarFarmacia() {
+  const navigate = useNavigate();
+
+  const [formData, setFormData] = useState({
+    logo: null,
+    nome: "",
+    telefone: "",
+    email: "",
+    licenca: "",
+    responsavel: "",
+    horario: "",
+    atendimento: "",
+    endereco: "",
+    provincia: "",
+    docLicenca: null,
+    docResponsavel: null,
+  });
+
+  function handleChange(e) {
+    const { name, value, files } = e.target;
+    setFormData({
+      ...formData,
+      [name]: files ? files[0] : value,
+    });
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+
+    const camposObrigatorios = [
+      "logo",
+      "nome",
+      "telefone",
+      "email",
+      "licenca",
+      "responsavel",
+      "horario",
+      "atendimento",
+      "endereco",
+      "provincia",
+      "docLicenca",
+      "docResponsavel",
+    ];
+
+    const algumVazio = camposObrigatorios.some((campo) => !formData[campo]);
+
+    if (algumVazio) {
+      alert("Por favor, preencha todos os campos obrigatórios.");
+      return;
+    }
+
+    // Simulação de sucesso
+    navigate("/dashboard/farmacia");
+  }
+
   return (
     <>
       <title>Cadastrar Farmácia | Sisa Free</title>
 
       <section className="min-h-screen flex items-center justify-center bg-slate-50 px-6 py-12">
         <div className="w-full max-w-3xl bg-white rounded-2xl p-8 shadow-lg border border-slate-200">
-          {/* Logo */}
           <div className="flex justify-center mb-6">
             <div className="w-16 h-16 flex items-center justify-center bg-teal-500 text-white rounded-full text-3xl shadow-lg">
               <i className="fa-solid fa-pills"></i>
@@ -22,174 +76,120 @@ export default function CadastrarFarmacia() {
             Complete as informações para validação da farmácia no Sisa Free.
           </p>
 
-          <form className="space-y-6">
-            {/* Foto de perfil */}
+          <form className="space-y-6" onSubmit={handleSubmit}>
             <div>
               <label className="block mb-2 font-semibold text-slate-700">
                 Logo / Foto da Farmácia
               </label>
               <input
                 type="file"
+                name="logo"
                 accept="image/*"
-                className="w-full p-3 rounded-lg bg-slate-100 border border-slate-300 focus:outline-none focus:border-teal-500 transition"
+                onChange={handleChange}
+                className="w-full p-3 rounded-lg bg-slate-100 border border-slate-300"
               />
             </div>
 
-            {/* Nome, contato e licença */}
             <div className="grid md:grid-cols-2 gap-4">
-              <div>
-                <label className="block mb-2 font-semibold text-slate-700">
-                  Nome da Farmácia
-                </label>
-                <input
-                  type="text"
-                  placeholder="Ex: Farmácia Central"
-                  className="w-full p-3 rounded-lg bg-slate-100 border border-slate-300 focus:outline-none focus:border-teal-500 transition"
-                />
-              </div>
-
-              <div>
-                <label className="block mb-2 font-semibold text-slate-700">
-                  Telefone
-                </label>
-                <input
-                  type="tel"
-                  placeholder="Ex: 9XX XXX XXX"
-                  className="w-full p-3 rounded-lg bg-slate-100 border border-slate-300 focus:outline-none focus:border-teal-500 transition"
-                />
-              </div>
-
-              <div>
-                <label className="block mb-2 font-semibold text-slate-700">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  placeholder="email@farmacia.com"
-                  className="w-full p-3 rounded-lg bg-slate-100 border border-slate-300 focus:outline-none focus:border-teal-500 transition"
-                />
-              </div>
-
-              <div>
-                <label className="block mb-2 font-semibold text-slate-700">
-                  Nº da Licença / Alvará
-                </label>
-                <input
-                  type="text"
-                  placeholder="Ex: ALV-987654"
-                  className="w-full p-3 rounded-lg bg-slate-100 border border-slate-300 focus:outline-none focus:border-teal-500 transition"
-                />
-              </div>
-            </div>
-
-            {/* Responsável técnico */}
-            <div>
-              <label className="block mb-2 font-semibold text-slate-700">
-                Farmacêutico Responsável
-              </label>
               <input
                 type="text"
-                placeholder="Nome do farmacêutico responsável"
-                className="w-full p-3 rounded-lg bg-slate-100 border border-slate-300 focus:outline-none focus:border-teal-500 transition"
+                name="nome"
+                placeholder="Nome da Farmácia"
+                onChange={handleChange}
+                className="w-full p-3 rounded-lg bg-slate-100 border border-slate-300"
               />
-            </div>
-
-            {/* Horário e atendimento */}
-            <div className="grid md:grid-cols-2 gap-4">
-              <div>
-                <label className="block mb-2 font-semibold text-slate-700">
-                  Horário de Funcionamento
-                </label>
-                <input
-                  type="text"
-                  placeholder="Ex: 08h - 22h"
-                  className="w-full p-3 rounded-lg bg-slate-100 border border-slate-300 focus:outline-none focus:border-teal-500 transition"
-                />
-              </div>
-
-              <div>
-                <label className="block mb-2 font-semibold text-slate-700">
-                  Tipo de Atendimento
-                </label>
-                <select className="w-full p-3 rounded-lg bg-slate-100 border border-slate-300 focus:outline-none focus:border-teal-500 transition">
-                  <option value="">Selecione</option>
-                  <option>Presencial</option>
-                  <option>Delivery</option>
-                  <option>Presencial e Delivery</option>
-                </select>
-              </div>
-            </div>
-
-            {/* Endereço */}
-            <div>
-              <label className="block mb-2 font-semibold text-slate-700">
-                Endereço
-              </label>
+              <input
+                type="tel"
+                name="telefone"
+                placeholder="Telefone"
+                onChange={handleChange}
+                className="w-full p-3 rounded-lg bg-slate-100 border border-slate-300"
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                onChange={handleChange}
+                className="w-full p-3 rounded-lg bg-slate-100 border border-slate-300"
+              />
               <input
                 type="text"
-                placeholder="Rua, bairro, referência"
-                className="w-full p-3 rounded-lg bg-slate-100 border border-slate-300 focus:outline-none focus:border-teal-500 transition"
+                name="licenca"
+                placeholder="Nº da Licença / Alvará"
+                onChange={handleChange}
+                className="w-full p-3 rounded-lg bg-slate-100 border border-slate-300"
               />
             </div>
 
-            {/* Província */}
             <div>
-              <label className="block mb-2 font-semibold text-slate-700">
-                Província
-              </label>
-              <select className="w-full p-3 rounded-lg bg-slate-100 border border-slate-300 focus:outline-none focus:border-teal-500 transition">
-                <option value="">Selecione a província</option>
-                <option>Bengo</option>
-                <option>Benguela</option>
-                <option>Bié</option>
-                <option>Cabinda</option>
-                <option>Cuando</option>
-                <option>Cubango</option>
-                <option>Cuanza Norte</option>
-                <option>Cuanza Sul</option>
-                <option>Cunene</option>
-                <option>Huambo</option>
-                <option>Huíla</option>
-                <option>Icolo e Bengo</option>
-                <option>Luanda</option>
-                <option>Lunda Norte</option>
-                <option>Lunda Sul</option>
-                <option>Malanje</option>
-                <option>Moxico</option>
-                <option>Moxico Leste</option>
-                <option>Namibe</option>
-                <option>Uíge</option>
-                <option>Zaire</option>
+              <input
+                type="text"
+                name="responsavel"
+                placeholder="Farmacêutico Responsável"
+                onChange={handleChange}
+                className="w-full p-3 rounded-lg bg-slate-100 border border-slate-300"
+              />
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-4">
+              <input
+                type="text"
+                name="horario"
+                placeholder="Horário de Funcionamento"
+                onChange={handleChange}
+                className="w-full p-3 rounded-lg bg-slate-100 border border-slate-300"
+              />
+              <select
+                name="atendimento"
+                onChange={handleChange}
+                className="w-full p-3 rounded-lg bg-slate-100 border border-slate-300"
+              >
+                <option value="">Tipo de Atendimento</option>
+                <option>Presencial</option>
+                <option>Delivery</option>
+                <option>Presencial e Delivery</option>
               </select>
             </div>
 
-            {/* Documentos */}
-            <div className="grid md:grid-cols-2 gap-4">
-              <div>
-                <label className="block mb-2 font-semibold text-slate-700">
-                  Documento da Licença
-                </label>
-                <input
-                  type="file"
-                  className="w-full p-3 rounded-lg bg-slate-100 border border-slate-300 focus:outline-none focus:border-teal-500 transition"
-                />
-              </div>
-
-              <div>
-                <label className="block mb-2 font-semibold text-slate-700">
-                  Documento do Responsável
-                </label>
-                <input
-                  type="file"
-                  className="w-full p-3 rounded-lg bg-slate-100 border border-slate-300 focus:outline-none focus:border-teal-500 transition"
-                />
-              </div>
+            <div>
+              <input
+                type="text"
+                name="endereco"
+                placeholder="Endereço"
+                onChange={handleChange}
+                className="w-full p-3 rounded-lg bg-slate-100 border border-slate-300"
+              />
             </div>
 
-            {/* Botão */}
+            <select
+              name="provincia"
+              onChange={handleChange}
+              className="w-full p-3 rounded-lg bg-slate-100 border border-slate-300"
+            >
+              <option value="">Selecione a província</option>
+              <option>Luanda</option>
+              <option>Benguela</option>
+              <option>Bengo</option>
+            </select>
+
+            <div className="grid md:grid-cols-2 gap-4">
+              <input
+                type="file"
+                name="docLicenca"
+                onChange={handleChange}
+                className="w-full p-3 rounded-lg bg-slate-100 border border-slate-300"
+              />
+              <input
+                type="file"
+                name="docResponsavel"
+                onChange={handleChange}
+                className="w-full p-3 rounded-lg bg-slate-100 border border-slate-300"
+              />
+            </div>
+
             <button
               type="submit"
-              className="w-full cursor-pointer py-3 mt-4 rounded-xl font-bold bg-teal-500 hover:bg-teal-600 transition text-white"
+              className="w-full py-3 mt-4 rounded-xl font-bold bg-teal-500 hover:bg-teal-600 text-white"
             >
               Enviar para Verificação
             </button>
