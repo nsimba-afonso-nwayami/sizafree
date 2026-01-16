@@ -74,6 +74,7 @@ import NotFoundFarmacia from "../pages/farmacia/NotFoundFarmacia";
 
 //Rotas do verificação
 import DashboardVerificacao from "../pages/verificacao/DashboardVerificacao";
+import HospitaisVerificacao from "../pages/verificacao/HospitaisVerificacao";
 import NotFoundVerificacao from "../pages/verificacao/NotFoundVerificacao";
 
 export default function AppRoutes () {
@@ -162,6 +163,7 @@ export default function AppRoutes () {
             {/*Rotas da verificação */}
             <Route path="/dashboard/verificacao/">
                 <Route path="" element={<DashboardVerificacao />} />
+                <Route path="hospitais" element={<HospitaisVerificacao />} />
                 <Route path="*" element={<NotFoundVerificacao />} />
             </Route>
         </Routes>
