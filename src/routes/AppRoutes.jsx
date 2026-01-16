@@ -72,6 +72,10 @@ import ConfiguracoesFarmacia from "../pages/farmacia/ConfiguracoesFarmacia";
 import NotificacoesFarmacia from "../pages/farmacia/NotificacoesFarmacia";
 import NotFoundFarmacia from "../pages/farmacia/NotFoundFarmacia";
 
+//Rotas do verificação
+import DashboardVerificacao from "../pages/verificacao/DashboardVerificacao";
+import NotFoundVerificacao from "../pages/verificacao/NotFoundVerificacao";
+
 export default function AppRoutes () {
     return (
         <Routes>
@@ -153,6 +157,12 @@ export default function AppRoutes () {
                 <Route path="configuracoes" element={<ConfiguracoesFarmacia />} />
                 <Route path="notificacoes" element={<NotificacoesFarmacia />} />
                 <Route path="*" element={<NotFoundFarmacia />} />
+            </Route>
+
+            {/*Rotas da verificação */}
+            <Route path="/dashboard/verificacao/">
+                <Route path="" element={<DashboardVerificacao />} />
+                <Route path="*" element={<NotFoundVerificacao />} />
             </Route>
         </Routes>
     )
