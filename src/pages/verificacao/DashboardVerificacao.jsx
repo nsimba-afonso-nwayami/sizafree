@@ -8,7 +8,7 @@ export default function DashboardVerificacao() {
 
       <VerificacaoLayout title="Dashboard de Verificação">
         {/* RESUMO RÁPIDO */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           <div className="bg-white p-6 rounded-xl shadow-sm border-l-4 border-teal-500">
             <div className="flex justify-between items-center">
               <div>
@@ -46,7 +46,7 @@ export default function DashboardVerificacao() {
               <i className="fas fa-vials text-teal-500 text-2xl"></i>
             </div>
           </div>
-        </div>
+        </section>
 
         {/* AÇÕES PRINCIPAIS */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
