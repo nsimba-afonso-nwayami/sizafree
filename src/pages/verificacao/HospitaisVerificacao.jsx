@@ -1,141 +1,191 @@
 import VerificacaoLayout from "./components/VerificacaoLayout";
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import Modal from "./components/Modal";
 
 export default function HospitaisVerificacao() {
+  const [openDetalhes, setOpenDetalhes] = useState(false);
+
+  const dummyHospitais = [
+    {
+      id: 101,
+      nome: "Hospital Geral de Luanda",
+      tipo: "Público",
+      cidade: "Luanda",
+      status: "Pendente",
+      responsavel: "Dr. António Manuel",
+      email: "contato@hgl.co.ao",
+      telefone: "+244 923 111 222",
+      dataEnvio: "Hoje",
+    },
+    {
+      id: 102,
+      nome: "Hospital Josina Machel",
+      tipo: "Público",
+      cidade: "Luanda",
+      status: "Aprovado",
+      responsavel: "Dra. Helena Costa",
+      email: "admin@josinamachel.co.ao",
+      telefone: "+244 923 333 444",
+      dataEnvio: "Ontem",
+    },
+    {
+      id: 103,
+      nome: "Hospital Vida Nova",
+      tipo: "Privado",
+      cidade: "Benguela",
+      status: "Rejeitado",
+      responsavel: "Sr. Carlos Mendes",
+      email: "contato@vidanova.co.ao",
+      telefone: "+244 923 555 666",
+      dataEnvio: "Há 5 dias",
+    },
+  ];
+
+  const getStatusColor = (status) => {
+    switch (status) {
+      case "Aprovado":
+        return "bg-green-600/20 text-green-800";
+      case "Pendente":
+        return "bg-yellow-500/20 text-yellow-800";
+      case "Rejeitado":
+        return "bg-red-600/20 text-red-800";
+      default:
+        return "bg-slate-200 text-slate-700";
+    }
+  };
+
   return (
     <>
       <title>Hospitais | Dashboard Verificação</title>
 
       <VerificacaoLayout title="Verificação de Hospitais">
-        {/* CABEÇALHO DA PÁGINA */}
-        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-          <p className="text-slate-500 text-sm max-w-2xl">
-            Analise, aprove ou rejeite os pedidos de cadastro de hospitais no
-            sistema. Verifique documentos, localização e dados institucionais.
-          </p>
-
+        {/* FILTROS */}
+        <div className="bg-white p-6 rounded-xl shadow-sm mb-6 flex flex-col sm:flex-row gap-4 items-center">
           <input
             type="text"
-            placeholder="Pesquisar hospital..."
-            className="border border-slate-300 rounded-lg px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500 w-full sm:w-64"
+            placeholder="Buscar hospital por nome ou cidade..."
+            className="p-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-teal-500 w-full sm:flex-1"
           />
+
+          <select className="p-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-teal-500 text-sm">
+            <option value="">Todos os Status</option>
+            <option>Pendente</option>
+            <option>Aprovado</option>
+            <option>Rejeitado</option>
+          </select>
         </div>
 
-        {/* LISTAGEM DE HOSPITAIS */}
-        <div className="bg-white rounded-xl shadow-sm overflow-x-auto">
-          <table className="min-w-full text-sm">
-            <thead className="bg-slate-100 text-slate-600">
-              <tr>
-                <th className="text-left px-6 py-4 font-semibold">Hospital</th>
-                <th className="text-left px-6 py-4 font-semibold">Cidade</th>
-                <th className="text-left px-6 py-4 font-semibold">Tipo</th>
-                <th className="text-left px-6 py-4 font-semibold">Status</th>
-                <th className="text-right px-6 py-4 font-semibold">Ações</th>
-              </tr>
-            </thead>
-
-            <tbody className="divide-y divide-slate-200">
-              {/* ITEM */}
-              <tr className="hover:bg-slate-50 transition">
-                <td className="px-6 py-4">
-                  <p className="font-medium text-slate-800">
-                    Hospital Geral de Luanda
+        {/* LISTA DE HOSPITAIS */}
+        <div className="flex flex-col gap-4">
+          {dummyHospitais.map((hospital) => (
+            <div
+              key={hospital.id}
+              className="bg-slate-50 border border-teal-200 rounded-xl p-5 shadow-sm hover:shadow-lg transition"
+            >
+              <div className="flex justify-between items-center mb-2">
+                <div>
+                  <p className="font-semibold text-teal-800">{hospital.nome}</p>
+                  <p className="text-slate-500 text-sm">
+                    {hospital.tipo} • {hospital.cidade}
                   </p>
-                  <p className="text-xs text-slate-500">
-                    CNPJ / Registro enviado
-                  </p>
-                </td>
+                </div>
 
-                <td className="px-6 py-4 text-slate-600">Luanda</td>
+                <span
+                  className={`px-3 py-1 rounded-full text-xs font-semibold ${getStatusColor(
+                    hospital.status,
+                  )}`}
+                >
+                  {hospital.status}
+                </span>
+              </div>
 
-                <td className="px-6 py-4 text-slate-600">Público</td>
+              <p className="text-slate-600 text-sm">
+                Data de envio:{" "}
+                <span className="font-medium">{hospital.dataEnvio}</span>
+              </p>
 
-                <td className="px-6 py-4">
-                  <span className="px-3 py-1 rounded-full text-xs font-semibold bg-yellow-100 text-yellow-700">
-                    Pendente
-                  </span>
-                </td>
+              {/* AÇÕES */}
+              <div className="flex justify-between items-center mt-4">
+                <button
+                  onClick={() => setOpenDetalhes(true)}
+                  className="text-blue-500 hover:text-blue-600 cursor-pointer flex items-center gap-1"
+                >
+                  <i className="fas fa-eye"></i> Ver Detalhes
+                </button>
 
-                <td className="px-6 py-4 text-right space-x-2">
-                  <button className="px-3 py-1 text-xs font-semibold bg-teal-500 hover:bg-teal-600 text-white rounded-lg transition cursor-pointer">
-                    Aprovar
-                  </button>
-                  <button className="px-3 py-1 text-xs font-semibold bg-red-500 hover:bg-red-600 text-white rounded-lg transition cursor-pointer">
-                    Rejeitar
-                  </button>
-                  <Link
-                    to="/dashboard/verificacao/hospitais/1"
-                    className="px-3 py-1 text-xs font-semibold bg-slate-200 hover:bg-slate-300 text-slate-800 rounded-lg transition"
-                  >
-                    Detalhes
-                  </Link>
-                </td>
-              </tr>
-
-              {/* ITEM */}
-              <tr className="hover:bg-slate-50 transition">
-                <td className="px-6 py-4">
-                  <p className="font-medium text-slate-800">
-                    Hospital Josina Machel
-                  </p>
-                  <p className="text-xs text-slate-500">
-                    Documentação completa
-                  </p>
-                </td>
-
-                <td className="px-6 py-4 text-slate-600">Luanda</td>
-
-                <td className="px-6 py-4 text-slate-600">Público</td>
-
-                <td className="px-6 py-4">
-                  <span className="px-3 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-700">
-                    Aprovado
-                  </span>
-                </td>
-
-                <td className="px-6 py-4 text-right">
-                  <Link
-                    to="/dashboard/verificacao/hospitais/2"
-                    className="px-3 py-1 text-xs font-semibold bg-slate-200 hover:bg-slate-300 text-slate-800 rounded-lg transition"
-                  >
-                    Ver detalhes
-                  </Link>
-                </td>
-              </tr>
-
-              {/* ITEM */}
-              <tr className="hover:bg-slate-50 transition">
-                <td className="px-6 py-4">
-                  <p className="font-medium text-slate-800">
-                    Hospital Vida Nova
-                  </p>
-                  <p className="text-xs text-slate-500">
-                    Licença em análise
-                  </p>
-                </td>
-
-                <td className="px-6 py-4 text-slate-600">Benguela</td>
-
-                <td className="px-6 py-4 text-slate-600">Privado</td>
-
-                <td className="px-6 py-4">
-                  <span className="px-3 py-1 rounded-full text-xs font-semibold bg-red-100 text-red-700">
-                    Rejeitado
-                  </span>
-                </td>
-
-                <td className="px-6 py-4 text-right">
-                  <Link
-                    to="/dashboard/verificacao/hospitais/3"
-                    className="px-3 py-1 text-xs font-semibold bg-slate-200 hover:bg-slate-300 text-slate-800 rounded-lg transition"
-                  >
-                    Ver detalhes
-                  </Link>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+                {hospital.status === "Pendente" && (
+                  <div className="flex gap-2">
+                    <button className="px-4 py-1 text-sm bg-teal-500 hover:bg-teal-600 text-white rounded-lg cursor-pointer">
+                      Aprovar
+                    </button>
+                    <button className="px-4 py-1 text-sm bg-red-500 hover:bg-red-600 text-white rounded-lg cursor-pointer">
+                      Rejeitar
+                    </button>
+                  </div>
+                )}
+              </div>
+            </div>
+          ))}
         </div>
+
+        {/* MODAL DETALHES DO HOSPITAL */}
+        <Modal
+          isOpen={openDetalhes}
+          onClose={() => setOpenDetalhes(false)}
+          title="Detalhes do Hospital"
+          icon="fas fa-hospital"
+        >
+          <div className="max-w-3xl mx-auto space-y-6">
+            <div className="bg-teal-50 border border-teal-200 rounded-xl p-6">
+              <h2 className="text-xl font-bold text-slate-800">
+                Hospital Geral de Luanda
+              </h2>
+              <p className="text-slate-500">Público • Luanda</p>
+
+              <span className="inline-block mt-3 px-4 py-1 rounded-full text-xs font-semibold bg-yellow-500/20 text-yellow-800">
+                Pendente
+              </span>
+            </div>
+
+            <div className="bg-white border border-slate-200 rounded-xl p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <p className="text-sm text-slate-500">Responsável</p>
+                <p className="font-semibold text-slate-800">
+                  Dr. António Manuel
+                </p>
+              </div>
+
+              <div>
+                <p className="text-sm text-slate-500">E-mail</p>
+                <p className="font-semibold text-slate-800">
+                  contato@hgl.co.ao
+                </p>
+              </div>
+
+              <div>
+                <p className="text-sm text-slate-500">Telefone</p>
+                <p className="font-semibold text-slate-800">+244 923 111 222</p>
+              </div>
+
+              <div>
+                <p className="text-sm text-slate-500">Data de Submissão</p>
+                <p className="font-semibold text-slate-800">Hoje</p>
+              </div>
+            </div>
+
+            <div className="flex justify-end gap-2">
+              <button
+                onClick={() => setOpenDetalhes(false)}
+                className="px-6 py-2 bg-slate-200 hover:bg-slate-300 text-slate-800 rounded-lg cursor-pointer"
+              >
+                Fechar
+              </button>
+              <button className="px-6 py-2 bg-teal-500 hover:bg-teal-600 text-white rounded-lg cursor-pointer">
+                Aprovar Hospital
+              </button>
+            </div>
+          </div>
+        </Modal>
       </VerificacaoLayout>
     </>
   );
