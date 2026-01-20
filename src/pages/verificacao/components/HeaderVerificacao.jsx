@@ -21,7 +21,7 @@ export default function HeaderVerificacao({ sidebarOpen, setSidebarOpen, title }
       <h2 className="text-lg sm:text-xl font-bold text-white">{title}</h2>
 
       <div className="flex items-center gap-4">
-        <Link to="/dashboard/especialista/notificacoes" className="relative text-xl text-white hover:text-teal-200 transition">
+        <Link to="/dashboard/verificacao/notificacoes" className="relative text-xl text-white hover:text-teal-200 transition">
           <i className="fas fa-bell"></i>
           <span className="absolute -top-1 -right-1 bg-teal-500 text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">
             3
