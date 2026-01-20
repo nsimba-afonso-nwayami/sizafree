@@ -80,6 +80,7 @@ import EspecialistasVerificacao from "../pages/verificacao/EspecialistasVerifica
 import LaboratoriosVerificacao from "../pages/verificacao/LaboratoriosVerificacao";
 import DocumentosVerificacao from "../pages/verificacao/DocumentosVerificacao";
 import HistoricoVerificacao from "../pages/verificacao/HistoricoVerificacao";
+import NotificacoesVerificacao from "../pages/verificacao/NotificacoesVerificacao";
 import NotFoundVerificacao from "../pages/verificacao/NotFoundVerificacao";
 
 export default function AppRoutes () {
@@ -174,6 +175,7 @@ export default function AppRoutes () {
                 <Route path="laboratorios" element={<LaboratoriosVerificacao />} />
                 <Route path="documentos" element={<DocumentosVerificacao />} />
                 <Route path="historico" element={<HistoricoVerificacao />} />
+                <Route path="notificacoes" element={<NotificacoesVerificacao />} />
                 <Route path="*" element={<NotFoundVerificacao />} />
             </Route>
         </Routes>
