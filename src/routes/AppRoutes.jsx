@@ -75,6 +75,11 @@ import NotFoundFarmacia from "../pages/farmacia/NotFoundFarmacia";
 //Rotas do verificação
 import DashboardVerificacao from "../pages/verificacao/DashboardVerificacao";
 import HospitaisVerificacao from "../pages/verificacao/HospitaisVerificacao";
+import FarmaciasVerificacao from "../pages/verificacao/FarmaciasVerificacao";
+import EspecialistasVerificacao from "../pages/verificacao/EspecialistasVerificacao";
+import LaboratoriosVerificacao from "../pages/verificacao/LaboratoriosVerificacao";
+import DocumentosVerificacao from "../pages/verificacao/DocumentosVerificacao";
+import HistoricoVerificacao from "../pages/verificacao/HistoricoVerificacao";
 import NotFoundVerificacao from "../pages/verificacao/NotFoundVerificacao";
 
 export default function AppRoutes () {
@@ -164,6 +169,11 @@ export default function AppRoutes () {
             <Route path="/dashboard/verificacao/">
                 <Route path="" element={<DashboardVerificacao />} />
                 <Route path="hospitais" element={<HospitaisVerificacao />} />
+                <Route path="farmacias" element={<FarmaciasVerificacao />} />
+                <Route path="especialistas" element={<EspecialistasVerificacao />} />
+                <Route path="laboratorios" element={<LaboratoriosVerificacao />} />
+                <Route path="documentos" element={<DocumentosVerificacao />} />
+                <Route path="historico" element={<HistoricoVerificacao />} />
                 <Route path="*" element={<NotFoundVerificacao />} />
             </Route>
         </Routes>
