@@ -32,7 +32,7 @@ export default function HeaderVerificacao({ sidebarOpen, setSidebarOpen, title }
           <span className="text-sm text-teal-200 hidden sm:block">
             Verificação
           </span>
-          <Link to="/dashboard/especialista/perfil" className="w-9 h-9 bg-teal-500 rounded-full flex items-center justify-center">
+          <Link to="/dashboard/verificacao/perfil" className="w-9 h-9 bg-teal-500 rounded-full flex items-center justify-center">
             <i className="fas fa-user text-white"></i>
           </Link>
         </div>
